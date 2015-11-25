@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Report</title>
+	</head>
+	<body>
+		<h1>Report</h1>	
+		<div>
+		by Iykon<br>
+		student number: 301295773<br> 
+		SFU user name: lykonp<br>
+		lecture section: D1<br>
+		instructor: Brian G. Booth<br>
+		TA: Scott Kristjanson<br>
+		</div>
+		<h2>Assignment Overview</h2>
+		<div>
+		This assignment is the extention of the last assignment lyrebird. On last assignment, I am given a file containing encrypted tweets. On this assignment, I am given a file which contains the path of those files containing encrypted tweets, and the path of files I should store the decrypted files. In sake of efficiency, I am required to create a process for each decryption, and keep track of these processes. The parent process can not ternimate until all the child processes terminate. And the information about these child processes should be output.
+		</div>
+		<h2>Design And Implementation</h2>
+		<div>
+		The structure of the whole program is very clear. The main function and lyrebird function is defined in the file lyrebird.c. That is also the code of parent process and child process. All other functions related to decryption is declared in decrypt.h and defined in decrypt.c.
+		<br><br>
+		In the main function, the program is dealing with the input file which include all the path of encrypted files and decrypted files. For each pair of files, the main function use fork() to create its child process to do the lyrebird work. Considering not to block the parent process, I use a queue to store all the process id of child processes, and let parent process check their status after all child processes are created so that they can do their work simultaneously.After every child process gets an assignment, it will then check the process id in the queue. If a child has not yet terminated, put it in the queue again and check later. While in child process, it will call the function "lyrebird" to do the work. After that, free used memory and exit so that the code of parent process and child process is separated. In the process, whenever an error occurs, child process ternimates abnormally and parent process will report it.
+		<br>
+		</div>
+		<h2>testing</h2>
+		<div>
+		Testing is done in 4 steps.<br>
+		Step 1: Check the code and find out typing mistakes. This step helps to avoid unexpected bugs.<br>
+		Step 2: Run all testing cases and compare my output with standard output. This step examins the correctness of my program.<br>
+		Step 3: Use memwatch to check if I didn't free some memory.<br>
+		Step 4: Use ps command to check if zombie processes are created and make sure that there is no processes left on the workstation.<br>
+		</div>
+	</body>
+</html>

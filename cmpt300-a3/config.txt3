@@ -1,0 +1,6 @@
+fcfs
+./encrypted_tweets.txt ./decrypted_tweets.txt
+./encrypted_tweets.txt ./decrypted_tweets2.txt
+./encrypted_tweets2.txt ./decrypted_tweets3.txt
+/home/iykon/Documents/sfu/cmpt300/assignment3/lyrebird/hh/encrypted_tweets.txt /home/iykon/Documents/sfu/cmpt300/assignment3/lyrebird/hh/hh.txt
+/home/iykon/Documents/sfu/cmpt300/assignment3/lyrebird/hh/encrypted_tweets2.txt /home/iykon/Documents/sfu/cmpt300/assignment3/lyrebird/hh/hhr.txt

@@ -1,0 +1,2798 @@
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 14:55:37 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 14:55:37 2015
+
+unfreed: <3> lyrebird.c(82), 1026 bytes at 0x7fad99801c40  	{72 6F 75 6E 64 20 72 6F 62 69 6E 0A 00 FE FE FE round robin.....}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 14:57:33 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 14:57:33 2015
+
+unfreed: <3> lyrebird.c(82), 1026 bytes at 0x7ff11b801c40  	{72 6F 75 6E 64 20 72 6F 62 69 6E 0A 00 FE FE FE round robin.....}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 14:57:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 14:57:53 2015
+
+unfreed: <3> lyrebird.c(82), 1026 bytes at 0x7ff713801c40  	{72 6F 75 6E 64 20 72 6F 62 69 6E 0A 00 FE FE FE round robin.....}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 14:59:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 14:59:36 2015
+
+unfreed: <3> lyrebird.c(83), 1026 bytes at 0x7fbb19801c40  	{72 6F 75 6E 64 20 72 6F 62 69 6E 0A 00 FE FE FE round robin.....}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 14:59:58 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 14:59:58 2015
+
+unfreed: <3> lyrebird.c(83), 1026 bytes at 0x7f8a7c801c40  	{72 6F 75 6E 64 20 72 6F 62 69 6E 0A 00 FE FE FE round robin.....}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 15:01:32 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 15:01:32 2015
+
+unfreed: <3> lyrebird.c(83), 1026 bytes at 0x7fcc44001c40  	{72 6F 75 6E 64 20 72 6F 62 69 6E 0A 00 FE FE FE round robin.....}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 15:03:52 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 15:03:52 2015
+
+unfreed: <3> lyrebird.c(83), 1026 bytes at 0x7fcdcc801c40  	{72 6F 75 6E 64 20 72 6F 62 69 6E 0A 00 FE FE FE round robin.....}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 15:04:32 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 15:04:32 2015
+
+unfreed: <3> lyrebird.c(83), 1026 bytes at 0x7ff959801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 15:05:21 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 15:05:21 2015
+
+unfreed: <3> lyrebird.c(83), 1026 bytes at 0x7fba3a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 3
+ L)argest memory usage      : 3078
+ T)otal of all alloc() calls: 3078
+ U)nfreed bytes totals      : 1026
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:42:12 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:42:12 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fef24002840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fef24002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fef24001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{2F 68 6F 6D 65 2F 75 73 65 72 69 64 2F 6D 6F 72 /home/userid/mor}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc873001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc873001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc873001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc873001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc873001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc873001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc873001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc873001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc873001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc873001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc873001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc873001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:43:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:43:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc873002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc873002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc873001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc873001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc873001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc3f9803a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc3f9801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc3f9803a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc3f9801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc3f9803a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc3f9801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc3f9803a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc3f9801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc3f9803a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc3f9801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc3f9803a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc3f9801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:45:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:45:53 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fc3f9804c40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fc3f9804640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fc3f9804040  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fc3f9803a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fc3f9801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fedc3001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fedc3001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fedc3001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fedc3001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fedc3001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fedc3001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fedc3001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fedc3001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fedc3001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fedc3001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fedc3001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fedc3001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:48:22 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:48:22 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fedc3002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fedc3002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fedc3001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fedc3001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fedc3001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f9453807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f9453801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f9453807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f9453801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f9453807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f9453801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f9453807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f9453801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f9453807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f9453801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f9453807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f9453801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:52:36 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:52:36 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f9453808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f9453808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f9453807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f9453807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f9453801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 19:53:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 19:53:06 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8e51002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8e51002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8e51001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8e51001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8e51001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:04:46 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:04:46 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fde3c002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fde3c002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fde3c001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fde3c001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fde3c001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:17 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:05:17 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fe5a9802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fe5a9802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fe5a9801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fe5a9801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fe5a9801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f882c801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f882c801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f882c801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f882c801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f882c801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f882c801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f882c801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f882c801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f882c801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f882c801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f882c801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f882c801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:05:53 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:06:03 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f882c802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f882c802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f882c801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f882c801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f882c801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7ff2ea001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7ff2ea001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7ff2ea001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7ff2ea001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7ff2ea001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7ff2ea001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7ff2ea001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7ff2ea001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7ff2ea001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7ff2ea001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7ff2ea001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7ff2ea001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:10:43 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:10:48 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff2ea002840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff2ea002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff2ea001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7ff2ea001640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7ff2ea001040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:20:02 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:20:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb049806440  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb049805e40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb049805840  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:20:51 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:20:56 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fa78b002840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fa78b002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fa78b001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:22:27 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:22:32 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ffb22802840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ffb22802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ffb22801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:22:52 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:22:57 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7ff83b802840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7ff83b802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7ff83b801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:24:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:24:43 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fa009002840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fa009002240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fa009001c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fd25a801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fd25a801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fd25a801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fd25a801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fd25a801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fd25a801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fd25a801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fd25a801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fd25a801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fd25a801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fd25a801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fd25a801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:06 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:07 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fd25a802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fd25a802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fd25a801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fd25a801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fd25a801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{30 FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE 0...............}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 3078
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fb521807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fb521801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fb521807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fb521801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fb521807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fb521801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fb521807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fb521801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fb521807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fb521801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fb521807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fb521801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:25:38 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:25:40 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7fb521808840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7fb521808240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7fb521807c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7fb521807640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7fb521801a40  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8434802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8434802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8434801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8434801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8434801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8434802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8434802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8434801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8434801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8434801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8434802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8434802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8434801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8434801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8434801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8434802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8434802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8434801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8434801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8434801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8434802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8434802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8434801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8434801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8434801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8434802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8434802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8434801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8434801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8434801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:26:34 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:26:35 2015
+
+unfreed: <5> lyrebird.c(92), 1026 bytes at 0x7f8434802840  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <4> lyrebird.c(91), 1026 bytes at 0x7f8434802240  	{30 00 43 68 69 6C 64 20 50 72 6F 63 65 73 73 20 0.Child Process }
+unfreed: <3> lyrebird.c(90), 1026 bytes at 0x7f8434801c40  	{66 63 66 73 0A 00 FE FE FE FE FE FE FE FE FE FE fcfs............}
+unfreed: <2> lyrebird.c(89), 1026 bytes at 0x7f8434801640  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+unfreed: <1> lyrebird.c(88), 1026 bytes at 0x7f8434801040  	{FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE FE ................}
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 5130
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:27:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:27:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:28:47 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:28:48 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:29:45 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:29:46 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0
+
+============= MEMWATCH 2.71 Copyright (C) 1992-1999 Johan Lindh =============
+
+Started at Mon Nov  2 20:39:11 2015
+
+Modes: __STDC__ 64-bit mwDWORD==(unsigned int)
+mwROUNDALLOC==8 sizeof(mwData)==56 mwDataSize==56
+
+
+Stopped at Mon Nov  2 20:39:12 2015
+
+
+Memory usage statistics (global):
+ N)umber of allocations made: 5
+ L)argest memory usage      : 5130
+ T)otal of all alloc() calls: 5130
+ U)nfreed bytes totals      : 0

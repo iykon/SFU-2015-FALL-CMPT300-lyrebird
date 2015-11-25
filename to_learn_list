@@ -1,0 +1,7 @@
+ps, kill command line
+ctime()
+sysconf()
+pipe()
+read()
+write()
+select()

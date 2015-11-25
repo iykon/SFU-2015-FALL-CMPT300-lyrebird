@@ -1,0 +1,28 @@
+Author information:
+	name:            Iykon Pan
+	SFU user name:   lykonp
+	lecture section: D100
+	instructor:      Brian G. Booth
+	TA:              Scott Kristjanson
+	
+Description:
+	The whole project comtains 6 files in total:
+	This README.
+	2 .c files: lyrebird.c, decrypt.c.
+	1 .h files: decrypt.h.
+	1 Makefile.
+	
+	Basiclly, lyrebird.c contains the main function and calls other functions to decrypt the tweets. 
+	And all those functions are declared in decrypt.h. 
+        Accordingly, decrypt.c defines these functions. 
+	The Makefile declares how these files are linked to each other and how the user is going to run project properly.
+
+Instruction:
+	To run the project, all you have to do is:
+	Use "make" to produce an executable file named lyrebird.
+	Use "./lyrebird input output" to run the program, where "input" should be the name of the file containing encrypted tweets and "output" is the name of the file containing decrypted tweets. Or, you can simply use "make test" to run it, where the input file name must be "encrypted_tweets.txt" and output "encrypted_output.txt".
+	Use make clean to remove the executable file, all .o files and core files.
+
+reference list:
+http://www.gnu.org/software/make/manual/make.html
+https://www.cs.cmu.edu/~gilpin/tutorial/
