@@ -11,8 +11,10 @@
 #define MAXLENGTH 1200
 
 int main(int argc, char **argv){
+	char c;
 	int sockfd;
 	int status;
+	int retv;
 	struct addrinfo hints;
 	struct addrinfo *serverinfo;
 	struct sockaddr_in addr;
@@ -50,9 +52,23 @@ int main(int argc, char **argv){
 		perror("connect");
 		exit(1);
 	}
-	printf("connect!");
-	read(sockfd, buf, MAXLENGTH);
-	printf("recerved message: %s\n",buf);
+	printf("connect!\n");
+	/*retv = read(sockfd, buf, MAXLENGTH);
+	if(retv == 0){
+		printf("socked closed by server");
+		exit(1);
+	}
+	printf("%s\n",buf);*/
+	while(1){
+		/*retv = read(sockfd, buf, MAXLENGTH);
+		if(retv == 0)
+			break;
+		printf("%s\n",buf);*/
+		printf("?");
+		scanf("%s",buf);
+		write(sockfd,"!fail", MAXLENGTH);
+		printf("write into socket\n");
+	}
 
 	close(sockfd);
 	return 0;
