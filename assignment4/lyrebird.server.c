@@ -231,6 +231,7 @@ int main(int argc, char **argv){
 					write(fds[i].fd, &status, MAXLENGTH);
 					write(fds[i].fd, encfile, MAXLENGTH);
 					fscanf(fcfg, "%s", decfile);
+					printf("%s %s\n", encfile, decfile);
 					write(fds[i].fd, decfile, MAXLENGTH);
 					printf("[%s] The lyrebird client %s has been given the task of decrypting %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, encfile);
 				}

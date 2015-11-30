@@ -10,7 +10,7 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <time.h>
-#include <memwatch.c>
+#include <memwatch.h>
 #include <decrypt.h>
 #include <scheduling.h>
 
@@ -43,10 +43,10 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
     char *encfile,*decfile;//encrypted file name and decrypted file name
     FILE *finp, *foutp;//file point for the input file and the output file
     ssize_t rwlen;//return value of read() or write()
-    int rtv;//return value
+    int retv;//return value
 
     //initialization
-    rtv = 0;
+    retv = 0;
     encfile = (char *) malloc (MAXLENGTH*sizeof(char));
     decfile = (char *) malloc (MAXLENGTH*sizeof(char));
     tweets = (char *) malloc (MAXLENGTH*sizeof(char));
@@ -55,20 +55,21 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
     if(tweets==NULL || decrypted==NULL || encfile==NULL || decfile==NULL){ //fail to malloc
         printf("[%s] Child process ID #%d failed to call malloc.\n",getcurtime(),getpid());
         write(cfd,CHILD_ERROR,CHILD_ERROR_LENGTH);
-        rtv = 1;
+        retv = 1;
     }
     else{
         while(1){
             rwlen = write(cfd,CHILD_READY,CHILD_READY_LENGTH);//notify parent process that it is ready for work
             if(rwlen<0){
                 printf("[%s] Child process ID #%d failed to write into pipe.\n",getcurtime(),getpid());
-                rtv = 1;
+                retv = 1;
                 break;
             }
             rwlen = read(pfd,encfile,MAXLENGTH);//block until read something
             if(rwlen==0)//parent process closed the pipe
                 break;
             read(pfd,decfile,MAXLENGTH);
+			printf("chold porcess get taks %s %s\n.", encfile, decfile);
             if(access(encfile,F_OK)==-1){//file not fould
                 printf("[%s] Child process ID #%d could not find file %s.\n",getcurtime(),getpid(),encfile);
             }
@@ -100,7 +101,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
     free(decfile);
     free(tweets);
     free(decrypted);
-    return rtv;
+    return retv;
 }
 
 int main(int argc, char **argv){
@@ -172,13 +173,14 @@ int main(int argc, char **argv){
 	for(i=0;i<cores-1;++i){
         if(pipe(pipepfd[i])==-1){
             printf("[%s] Process ID #%d failed to create pipes.\n",getcurtime(),getpid());
-            terminateval = 1;
+            //terminateval = 1;
             //goto terminate;
         }
         if(pipe(pipecfd[i])==-1){
             printf("[%s] Process ID #%d failed to create pipes.\n",getcurtime(),getpid());
-            terminateval = 1;
+            //terminateval = 1;
             //goto terminate;
+			exit(1);
         }
         // get the nfds for select()
         if(nfds<pipepfd[i][0])
@@ -214,16 +216,17 @@ int main(int argc, char **argv){
 			}
 			
 			//call lyrebird to decrypt files
-			rtv = lyrebird(pipepfd[pipenum][0], pipecfd[pipenum][1]);
+			retv = lyrebird(pipepfd[pipenum][0], pipecfd[pipenum][1]);
 
 			//free
 			close(pipepfd[pipenum][0]);
             close(pipecfd[pipenum][1]);
             free(encfile);
             free(decfile);
-            free(scheduling);
-            free(feedback);
-            if(rtv)
+			free(buf);
+            //free(scheduling);
+            //free(feedback);
+            if(retv)
                  exit(EXIT_FAILURE);
             else
 	            exit(EXIT_SUCCESS);
@@ -259,6 +262,7 @@ int main(int argc, char **argv){
 					read(sockfd, encfile, MAXLENGTH);
 					read(sockfd, decfile, MAXLENGTH);
 					printf("[%s] Child process ID #%d will decrypt %s.\n", getcurtime(), childprocess[i], encfile);
+					write(pipepfd[currentchild][1], encfile, MAXLENGTH);
 					write(pipepfd[currentchild][1], decfile, MAXLENGTH);
 				}
 				else {
@@ -269,6 +273,7 @@ int main(int argc, char **argv){
 						read(pipecfd[j][0], buf, MAXLENGTH);
 					}*/
 					//close
+					break;
 					exit(0);
 				}
 			}
@@ -293,14 +298,17 @@ int main(int argc, char **argv){
 			endid = waitpid(childprocess2[i], &status, WNOHANG|WUNTRACED);
             if(endid==-1){// error calling waitpid
                 printf("[%d] Fail to call waitpid().\n",childprocess2[i]);
-                terminateval = 1;
-                goto terminate;
+                //terminateval = 1;
+                //goto terminate;
+				exit(1);
             }
             else if(endid==0){//child still running
             	childprocess[children++] = childprocess2[i];//put the child process back into the queue, check it later
             }
             else{//child ended
-            	if(WIFEXITED(status)){}//terminate normally
+            	if(WIFEXITED(status)){//terminate normally
+					printf("[%s] Child process ID #%d exited successfully.\n", getcurtime(), childprocess2[i]);
+				}
             	else if(WIFSIGNALED(status)){//terminate abnormally
             		printf("[%s] Child process ID #%d did not terminate successfully.\n",getcurtime(),childprocess2[i]);
             	}
