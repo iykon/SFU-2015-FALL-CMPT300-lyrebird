@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Report</title>
+	</head>
+	<body>
+		<h1>Report</h1>	
+		<div>
+		by Iykon<br>
+		student number: 301295773<br> 
+		SFU user name: lykonp<br>
+		lecture section: D1<br>
+		instructor: Brian G. Booth<br>
+		TA: Scott Kristjanson<br>
+		</div>
+		<h2>Assignment Overview</h2>
+		<div>
+		Based on last two assignments, this assignment has more extentions. The program first gets the number of cores on the running computer and create a child process for each core. This program uses pipes for communication between parent process and child process. As there may be more files than the number of child processes, the program uses either firsr-come-first-serve or round robin as its scheduling algorithm. The scheduling algorithm is given on input file. When all assignments are done, parent process closes to pipe it writes data into. Child processes then close both pipes it reads and writes and exit. Then parent process close all remaining pipes and wait until all child processes exit.
+		</div>
+		<h2>Design And Implementation</h2>
+		<div>
+		The structure of the whole program is very clear. The main function and lyrebird function is defined in the file lyrebird.c. That is also the code of parent process and child process. All other functions related to decryption is declared in decrypt.h and defined in decrypt.c. Scheduling.h contains scheduling protocal.
+		<br><br>
+		For parent process, it first reads the number of cores on running computer and creates child processes for each core. Meanwhile, pipes are created for each child process for communication. Then it reads the config files to decide scheduling algorithm. It reads the pairs of paths from the config file and assign them to child process which is ready accoring to scheduling algorithm. For round robin, each child process takes turns to decrypt. For first-come-first-serve, parent process call select() to find one ready child process and gives the assignment to it. When all are done, parent process closes the pipes it writes into and read the maining messages from reading pipe until it is closed. Then it waits until all child processes exit.
+		<br><br>
+		For child process, when it is ready, writes into a pipe to notify parent process. It calls read() to read pair of paths which will block if there are no data. Then it decrypts the tweets. When the reading pipe is closed, it close both pipes and exit.
+		<br>
+		</div>
+		<h2>Testing</h2>
+		<div>
+		Testing is done in 4 steps.<br>
+		Step 1: Module testing. Whenever I implemented a module, like decrypting, creating cihld processes for each core, creating pipes and communicating, waiting for child processes to exit, test the correctness of the module.<br>
+		Step 2: Static debugging. Check the code and find out typing mistakes or the order of some modules.<br>
+		Step 3: Run sample testing cases and compare my output with standard output.<br>
+		Step 4: Add a line of scheduling algorithm to each config files in the test cases for assignment 2. Then run my code to test correctness. Examine some of the output messages manually.<br>
+		To this far, the program runs correctly and meets the requirements.<br>
+		</div>
+	</body>
+</html>

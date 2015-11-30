@@ -6,9 +6,13 @@
 #include <ifaddrs.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <errno.h>
 #include <netdb.h>
 
 #define MAXLENGTH 1200
+
+const char success[100] = "!success";
+const char fail[100] = "!fail";
 
 int main(int argc, char **argv){
 	char c;
@@ -25,7 +29,7 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 
-	buf = (char *)malloc(sizeof(char)*MAXLENGTH);
+	buf = (char *)malloc(sizeof(char)*(MAXLENGTH+2));
 
 	/*memset(&hints, 0, sizeof hints);
 	hints.ai_family = AF_INET;
@@ -59,15 +63,39 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	printf("%s\n",buf);*/
-	/*while(1){
-		printf("?");
+	while(1){
+		printf("?\n");
 		scanf("%s",buf);
-		write(sockfd,"!fail", MAXLENGTH);
-		printf("write into socket\n");
-	}*/
-	write(sockfd, "!success", MAXLENGTH);
-	while(read(sockfd, buf, MAXLENGTH)){
-		printf("%s\n",buf);
+		retv = send(sockfd, (char *)fail, MAXLENGTH, 0);
+		if(retv < 0){
+			printf("%d\n",errno);
+			switch (errno){
+				case EAGAIN:
+					printf("1\n");
+					break;
+				case EBADF:
+					printf("2\n");
+					break;
+				case EFAULT:
+					printf("3\n");
+					break;
+				case EINTR:
+					printf("4\n");
+					break;
+				case EINVAL:
+					printf("5\n");
+					break;
+				case EIO:
+					printf("6\n");
+					break;
+				case EISDIR:
+					printf("7\n");
+					break;
+				default:break;
+}
+		exit(1);
+}
+		printf("write into socket with return value %d\n",retv);
 	}
 
 	close(sockfd);

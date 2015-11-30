@@ -1,0 +1,66 @@
+0. Author information:
+	name:            Iykon Pan
+	student ID:	 301295773
+	SFU user name:   lykonp
+	lecture section: D1
+	instructor:      Brian G. Booth
+	TA:              Scott Kristjanson
+	
+
+1. Project Overview
+
+This is a project for assignment 3 which will do certain amout of works as following.
+ * Inspects the number of cores of computer which runs this program, and for each core forks a child process. This parent process occupies a core.
+ * For each child process, creates two pipes, one for parent process sending messages, and the other for child process to sending messages.
+ * Reads in a file and works. The file should follow regular format. The first line of the file should either be "round robin" or "fcfs", without quotation marks which represent scheduling algorithm of round robin or first come fist serve. Other format will be regarded as unknown algrithm. The following lines of the file are the same, with each line contain the path of an encetyped file and the path of decrypted file.
+ * For each pair of paths, assign the work to a child process based on the given scheduling algorithm through the pipe.
+ * When a child process finished an assignment, it writes a message into pipe to notify parent process. Parent process checks the pipes and knows which child process is ready for subsequent assignments. 
+ * After all assignments are done, parent process closes the pipes where child process get notices from.
+ * Child process detects the pipe is closed, and it closes the pipe where it send message to parent process. Then it terminates for good.
+ * Parent process detects child process closed the pipes where parent process gets feedback, then close all pipes.
+ * Parent process will wait until all child process terminate normally or abnormally then terminate.
+
+
+2. Algorithm details
+
+The basic structure of algrithm is as above. Here are some details.
+ * For first come first serve algorithm, every time parent process reads a pair of paths, it will put all pipes where it receives feedbacks and call select() to wait until at least one pipe is readable. 
+ * For round robin algorithm, every time parent process reads a pair of paths, it will call select() to wait until that child process is ready.
+ * Once the any child process encounters some fatal errors, parent process will not continue working and close all pipes and exit after all child process exit.
+ * Child process call read() to read the pair of paths. If there is no data, it will block. Once it is done, it call write() and send a ceitain message to notufy parent process it is ready for subsequent assignment. When it encounters an error, if it is not fatal, it will report it and send the same message as when it is ready. Otherwise, it will send another message meaning that it is going to exit.
+
+
+3. Structure details
+
+The packet contains seven files. Here is the detail of each file.
+ *a lyrebird.c: This file contains both code for child process and child process. This is the main part of the program for pparent rocess including file reading, error handling, creating child processes, scheduling, using pipes, waiting until all child processes exit. For child process, this part of code includes file reading, error handling, reading and writing pipes to communicate with parent process and call functions to do decrytion.
+ *b decrypt.c: Defines all functions for decrypting.
+ *c decrypt.h: Declares all functions and some constants for decrypting.
+ *d scheduling.h: Defines some macors as the protocal for the message format between child process and parent process.
+ *e Makefile: A bash script to link and compile all related files and generate executable file.
+ *f report.html: A html file as a report for this project.
+ *g README: This file you are reading. An instruction. 
+
+
+4. Instructions:
+To run the project, all you have to do is as follows.
+
+	$ make
+This helps you compile the programs and generate an executable file lyrebird.
+	
+	$ ./lyrebird <filename>
+After make, you can run the program. The second argument is the file contains a line of scheduling algorithm and pairs of paths.
+
+	$ make clean
+This helps you delete .o files, core, the executable file lyrebird and .log file produced by memwatch.
+
+
+5: reference list:
+http://stackoverflow.com/questions/6084218/is-it-good-practice-to-free-a-null-pointer-in-c
+http://stackoverflow.com/questions/3661285/how-to-iterate-through-a-fd-set
+http://linux.die.net/man/3/fd_set
+http://manpages.courier-mta.org/htmlman2/select.2.html
+http://linux.die.net/man/2/pipe
+http://linux.die.net/man/2/read
+http://linux.die.net/man/2/write
+http://linux.die.net/man/7/pipe

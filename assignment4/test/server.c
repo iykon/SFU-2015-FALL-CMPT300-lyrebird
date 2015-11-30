@@ -105,14 +105,14 @@ int main(int argc, char **argv){
 	nfds = 1;
 	fds[0].fd = sockfd;
 	fds[0].events = POLLIN;
-	while(count<10){
-		//printf("[%s] calling poll()...\n",getcurtime());
+	/*while(count<10){
+		printf("[%s] calling poll()...\n",getcurtime());
 		retv = poll(fds,nfds,-1);
 		if(retv < 0){
 			perror("poll");
 			exit(1);
 		}
-		//printf("[%s] calling poll() done.\n",getcurtime());
+		printf("[%s] calling poll() done.\n",getcurtime());
 		//while(1){
 		cur_nfds = nfds;
 		//printf("[%s] current nfsd: %d\n",getcurtime(),nfds);
@@ -133,13 +133,13 @@ int main(int argc, char **argv){
 				}
 				sockfds[count++] = csockfd;
 				//printf("[%s] Little bitcha, I am accepted!\n",getcurtime());
-				//getsockname(csockfd, (struct sockaddr *)&myaddr, /*(socklen_t *)(sizeof myaddr)*/&len); 
+				//getsockname(csockfd, (struct sockaddr *)&myaddr, &len); 
 				printf("[%s] ip address: %s.\nport is: %d.\n",getcurtime(),inet_ntoa(myaddr.sin_addr),ntohs(myaddr.sin_port));
 				printf("[%s] current connected: %d\n", getcurtime(), count);
 				//scanf("%s",buf);
 				buf = "congratulations for connecting!";
 				//write(csockfd, buf, MAXLENGTH);
-				write(csockfd,buf,MAXLENGTH);
+				send(csockfd,buf,MAXLENGTH,0);
 				fds[nfds].fd = csockfd;
 				fds[nfds].events = POLLIN;
 				++nfds;
@@ -147,7 +147,7 @@ int main(int argc, char **argv){
 			}
 			else{
 				//printf("there is a message.\n");
-				read(fds[i].fd, rbuf, MAXLENGTH);
+				recv(fds[i].fd, rbuf, MAXLENGTH,0);
 				printf("socked id: %d\n",fds[i].fd);
 				//printf("message got.\n");
 				buf = "Someone said: ";
@@ -161,6 +161,16 @@ int main(int argc, char **argv){
 	}
 	//close(csockfd);
 	//}
+	*/
+	csockfd = accept(sockfd, (struct sockaddr *)&myaddr, &len);
+	if(csockfd < 0){
+		perror("accept");
+		exit(1);
+	}
+	printf("connected!\n");
+	read(csockfd, buf, MAXLENGTH);
+	printf("%s\n",buf);
+	
 
 	close(sockfd);
 	
