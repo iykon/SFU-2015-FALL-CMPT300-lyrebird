@@ -12,19 +12,21 @@
 #include <time.h>
 #include <poll.h>
 
-#define MAXCONNECTION 100
+#define MAXCONNECTION 10000
 #define MAXLENGTH 1200
 #define LSWORK 0x0001
 #define LSDONE 0x0002
 #define LCSUCC 0x0004
 #define LCFAIL 0x0008
 #define LCREADY 0x0010
-/*
-typedef struct pollfds{
-	struct pollfd fds;
-	struct pollfds *next;
-} pfd;
-*/
+
+char *ipaddress;
+char *buf;
+char *encfile, *decfile;
+FILE *fcfg, *flog;
+struct pollfd fds[MAXCONNECTION];
+int nfds;
+
 char *getcurtime(){
 	char *curtime;
 	time_t ctm;
@@ -56,52 +58,55 @@ void getIPaddress(char *buf){
 	}
 }
 
+void terminate(int exitv){
+	int i;
+	for(i = 0; i < nfds; ++i) 
+		close(fds[i].fd);
+	free(buf);
+	free(encfile);
+	free(decfile);
+	free(fcfg);
+	free(flog);
+	exit(exitv);
+}
+
 int main(int argc, char **argv){
-	FILE *fcfg, *flog;
 	int i,j;
 	int status;
-	int nfds,cur_nfds,addrs;
-	int count, on;
+	int cur_nfds,addrs;
+	int on;
 	int sockfd, csockfd;
-	int sockfds[MAXCONNECTION];
 	int addrindex[MAXCONNECTION];
-	int timeout;
 	int taskover;
 	struct addrinfo hints, *serverinfo, *p;
 	struct sockaddr addr;
 	struct sockaddr_in myaddr[MAXCONNECTION];
-	struct pollfd fds[MAXCONNECTION];
 	//pfd *pfds, *npfd, *ptr;
 	int retv;
-	char *ipaddress;
-	char *buf, *rbuf;
-	char *encfile, *decfile;
-	char **ips;
 	socklen_t len;
 
 	if(argc!=3){
 		printf("usage %s <config_file> <log_file>\n",argv[0]);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 
 	if(access(argv[1], F_OK) == -1) {
-		printf("[%s] ...\n",getcurtime());
-		exit(1);
+		printf("[%s] lyrebird.server PID %d cound not find file %s.\n", getcurtime(), getpid(), argv[1]);
+		exit(EXIT_FAILURE);
 	}
 	fcfg = fopen(argv[1], "r+");
 	if(fcfg == NULL){
-		printf("[%s] ...\n", getcurtime());
-		exit(1);
+		printf("[%s] lyrebird.server PID %d cound not open file %s.\n", getcurtime(), getpid(), argv[1]);
+		exit(EXIT_FAILURE);
 	}
 	flog = fopen(argv[2], "w+");
 	if(flog == NULL){
-		printf("[%s] ...\n",getcurtime());
-		exit(1);
+		printf("[%s] lyrebird.server PID %d cound not open file %s.\n", getcurtime(), getpid(), argv[2]);
+		exit(EXIT_FAILURE);
 	}
 
 	ipaddress = (char *)malloc(sizeof(char)*INET_ADDRSTRLEN);
 	buf = (char *)malloc(sizeof(char)*MAXLENGTH);
-	rbuf = (char *)malloc(sizeof(char)*MAXLENGTH);
 	encfile = (char *)malloc(sizeof(char)*MAXLENGTH);
 	decfile = (char *)malloc(sizeof(char)*MAXLENGTH);
 	//ips = (char **)malloc(sizeof(char)*MAXLENGTH);
@@ -109,48 +114,53 @@ int main(int argc, char **argv){
 	memset(fds,0,sizeof(fds));
 
 	taskover = 0;
+	nfds = 0;
 	getIPaddress(ipaddress);
 	//printf("id: %s\n",ipaddress);
 	len = sizeof(addr);
 	
 	if((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1){
-		perror("socket");
-		exit(1);
-	}
-
-	on = 1;
-	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (char *)&on, sizeof(on)) < 0 ){
-		perror("setsockopt");
-		exit(1);
-	}
-	myaddr[0].sin_family = AF_INET;
-	myaddr[0].sin_addr.s_addr = inet_addr(ipaddress);
-	myaddr[0].sin_port = 0;
-
-	if(bind(sockfd, (struct sockaddr *)&myaddr[0], sizeof(myaddr[0])) < 0){
-		perror("bind");
-		exit(1);
-	}
-	getsockname(sockfd, (struct sockaddr *)&myaddr[0], &len);
-	printf("[%s] lyrebird.server: PID %d on host %s, port %d\n",getcurtime(), getpid(), inet_ntoa(myaddr[0].sin_addr), ntohs(myaddr[0].sin_port));
-
-	if(listen(sockfd, MAXCONNECTION) < 0){
-		perror("listen");
-		exit(1);
+		printf("[%s] lyrebird.server PID %d failed to call socket.\n", getcurtime(), getpid());
+		terminate(EXIT_FAILURE);
 	}
 	nfds = 1;
 	fds[0].fd = sockfd;
 	fds[0].events = POLLIN;
 	addrindex[0] = 0;
 	addrs = 1;
+	on = 1;
+	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (char *)&on, sizeof(on)) < 0 ){
+		printf("[%s] lyrebird.server PID %d failed to call setsockopt.\n", getcurtime(), getpid());
+		terminate(EXIT_FAILURE);
+	}
+	myaddr[0].sin_family = AF_INET;
+	myaddr[0].sin_addr.s_addr = inet_addr(ipaddress);
+	myaddr[0].sin_port = 0;
+
+	if(bind(sockfd, (struct sockaddr *)&myaddr[0], sizeof(myaddr[0])) < 0){
+		printf("[%s] lyrebird.server PID %d failed to call bind.\n", getcurtime(), getpid());
+		terminate(EXIT_FAILURE);
+	}
+	if(getsockname(sockfd, (struct sockaddr *)&myaddr[0], &len) < 0) {
+		printf("[%s] lyrebird.server PID %d failed to call getsockname.\n", getcurtime(), getpid());
+		terminate(EXIT_FAILURE);
+	}
+	printf("[%s] lyrebird.server: PID %d on host %s, port %d\n",getcurtime(), getpid(), inet_ntoa(myaddr[0].sin_addr), ntohs(myaddr[0].sin_port));
+
+	if(listen(sockfd, MAXCONNECTION) < 0){
+		printf("[%s] lyrebird.server PID %d failed to call listen.\n", getcurtime(), getpid());
+		terminate(EXIT_FAILURE);
+	}
 	/*fds->next = NULL;
 	fds->fds.fd = sockfd;
 	fds->fds.events = POLLIN;*/
 	do{
+		//printf("calling...\n");
 		retv = poll(fds, nfds, -1);
+		//printf("calling done...\n");
 		if(retv < 0){
-			perror("poll");
-			exit(1);
+			printf("[%s] lyrebird.server PID %d failed to call poll.\n", getcurtime(), getpid());
+			terminate(EXIT_FAILURE);
 		}
 
 		cur_nfds = nfds;
@@ -178,20 +188,20 @@ int main(int argc, char **argv){
 			if(fds[i].fd == sockfd) { 
 				csockfd = accept(sockfd, (struct sockaddr *)&myaddr[addrs], &len);
 				if(csockfd < 0){
-					perror("accept");
-					exit(1);
+					printf("[%s] lyrebird.server PID %d failed to call accept.\n", getcurtime(), getpid());
+					terminate(EXIT_FAILURE);
 				}
 				fds[nfds].fd = csockfd;
 				fds[nfds].events = POLLIN;
 				addrindex[nfds] = addrs;
 				++nfds;
 				++addrs;
-				printf("connect!\n");
-				for(j = 1; j < nfds; ++j)
-					printf("%d ",fds[j].fd);
-				printf("\n");
+				//printf("connect!\n");
+				//for(j = 1; j < nfds; ++j)
+					//printf("%d ",fds[j].fd);
+				//printf("\n");
 				//fprintf(flog, "[%s] client with ip %s and port %d conneted.\n", getcurtime(), inet_ntoa(myaddr[addrindex[nfds-1]].sin_addr), ntohs(myaddr[addrindex[nfds-1]].sin_port));
-				printf("[%s] client with ip %s and port %d conneted.\n", getcurtime(), inet_ntoa(myaddr[addrindex[nfds-1]].sin_addr), ntohs(myaddr[addrindex[nfds-1]].sin_port));
+				fprintf(flog, "[%s] Successfully connected to lyrebird client %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[nfds-1]].sin_addr));
 			}
 			/*
 			a new message from old connection
@@ -200,10 +210,13 @@ int main(int argc, char **argv){
 				retv = read(fds[i].fd, buf, MAXLENGTH);
 				//peer closed socket
 				if(retv == 0) {
+					close(fds[i].fd);
 					if(taskover == 0)
-						printf("[%s] The lyrebird client %s has disconnected unexpectedly.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/);
+						//printf("[%s] The lyrebird client %s has disconnected unexpectedly.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/);
+						fprintf(flog, "[%s] The lyrebird client %s has disconnected unexpectedly.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/);
 					else
-						printf("[%s] The lyrebird client %s has disconnected expectedly.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/);
+						fprintf(flog, "[%s] The lyrebird client %s has disconnected expectedly.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/);
+						//printf("[%s] The lyrebird client %s has disconnected expectedly.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/);
 					for(j = i; j < cur_nfds-1; ++j) {
 						fds[j] = fds[j+1];
 						addrindex[j] = addrindex[j+1];
@@ -233,27 +246,25 @@ int main(int argc, char **argv){
 					fscanf(fcfg, "%s", decfile);
 					printf("%s %s\n", encfile, decfile);
 					write(fds[i].fd, decfile, MAXLENGTH);
-					printf("[%s] The lyrebird client %s has been given the task of decrypting %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, encfile);
+					//printf("[%s] The lyrebird client %s has been given the task of decrypting %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, encfile);
+					fprintf(flog, "[%s] The lyrebird client %s has been given the task of decrypting %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, encfile);
 				}
 				else if(buf[0] == LCFAIL) {
 					//printf("fail!\n");
 					read(fds[i].fd, buf, MAXLENGTH);
-					printf("[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
+					//printf("[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
+					fprintf(flog, "[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
 				}
 				else if(buf[0] == LCSUCC) {
 					//printf("success!\n");
 					read(fds[i].fd, buf, MAXLENGTH);
-					printf("[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
-				}
-				else{
-					printf("others\n");
+					fprintf(flog, "[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
+					//printf("[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
 				}
 			}
 		}
-	}while(nfds>1);
-
+	} while(nfds>1);
 	printf("[%s] lyrebird server: PID %d completed its tasks and is exiting successfully.\n", getcurtime(), getpid());
 
-
-	return 0;
+	terminate(EXIT_SUCCESS);
 }

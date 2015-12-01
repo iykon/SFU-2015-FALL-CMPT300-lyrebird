@@ -38,9 +38,32 @@ char *getcurtime(){
     return curtime; 
 }
 
+void reverse(char *s){
+	int i;
+	char c;
+	for(i = 0; i < strlen(s); ++i) {
+		c = s[i];
+		s[i] = s[strlen(s)-1-i];
+		s[strlen(s)-1-i] = c;
+	}
+}
+
+char *itoa(int n, char *s){
+	int i;
+	i = 0;
+	while(n > 0) {
+		s[i++] = n%10+'0';
+		n /= 10;
+	}
+	s[i] = 0;
+	reverse(s);
+	return s;
+}
+
 int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent process write data into, cfd is for child process to write data into
     char *tweets,*decrypted;//use tweets to store a tweet which is to be decrypted, and decrypted to store the decrypted tweet
     char *encfile,*decfile;//encrypted file name and decrypted file name
+	char *errmsg;
     FILE *finp, *foutp;//file point for the input file and the output file
     ssize_t rwlen;//return value of read() or write()
     int retv;//return value
@@ -51,41 +74,55 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
     decfile = (char *) malloc (MAXLENGTH*sizeof(char));
     tweets = (char *) malloc (MAXLENGTH*sizeof(char));
     decrypted = (char *) malloc (MAXLENGTH*sizeof(char));
+	errmsg = (char *)malloc(MAXLENGTH*sizeof(char));
 
     if(tweets==NULL || decrypted==NULL || encfile==NULL || decfile==NULL){ //fail to malloc
         printf("[%s] Child process ID #%d failed to call malloc.\n",getcurtime(),getpid());
-        write(cfd,CHILD_ERROR,CHILD_ERROR_LENGTH);
+        write(cfd,CHILD_FERROR,MAXLENGTH);
         retv = 1;
     }
     else{
-        while(1){
-            rwlen = write(cfd,CHILD_READY,CHILD_READY_LENGTH);//notify parent process that it is ready for work
-            if(rwlen<0){
-                printf("[%s] Child process ID #%d failed to write into pipe.\n",getcurtime(),getpid());
-                retv = 1;
-                break;
-            }
+        while(1) {
+            write(cfd,CHILD_READY,MAXLENGTH);//notify parent process that it is ready for work
             rwlen = read(pfd,encfile,MAXLENGTH);//block until read something
             if(rwlen==0)//parent process closed the pipe
                 break;
             read(pfd,decfile,MAXLENGTH);
-			printf("chold porcess get taks %s %s\n.", encfile, decfile);
+			//printf("chold porcess get taks %s %s\n.", encfile, decfile);
             if(access(encfile,F_OK)==-1){//file not fould
+				strcpy(errmsg, "Unable to find file ");
+				strcat(errmsg, encfile);
+				strcat(errmsg, " in process ");
+				strcat(errmsg, itoa(getpid(), tweets));
+				write(cfd, CHILD_ERROR, MAXLENGTH);
+				write(cfd, errmsg, MAXLENGTH);
                 printf("[%s] Child process ID #%d could not find file %s.\n",getcurtime(),getpid(),encfile);
             }
             else{//start decrypting
                 finp = fopen(encfile,"r");
                 if(finp==NULL){ // fail to open file
+					strcpy(errmsg, "Unable to open file ");
+					strcat(errmsg, encfile);
+					strcat(errmsg, " in process ");
+					strcat(errmsg, itoa(getpid(), tweets));
+					write(cfd, CHILD_ERROR, MAXLENGTH);
+					write(cfd, errmsg, MAXLENGTH);
                     printf("[%s] Child process ID #%d failed to open file %s.\n",getcurtime(),getpid(),encfile);
                     continue;
                 }
                 foutp=fopen(decfile,"w+");
                 if(foutp==NULL){ //fail to open file
+					strcpy(errmsg, "Unable to open file ");
+					strcat(errmsg, decfile);
+					strcat(errmsg, " in process ");
+					strcat(errmsg, itoa(getpid(), tweets));
+					write(cfd, CHILD_ERROR, MAXLENGTH);
+					write(cfd, errmsg, MAXLENGTH);
                     printf("[%s] Child process ID #%d failed to open file %s.\n",getcurtime(),getpid(),decfile);
                     fclose(finp);
                     continue;
                 }
-                while(fgets(tweets,MAXLENGTH,finp)!=NULL){//read an encrypted tweet
+                while(fgets(tweets,MAXLENGTH,finp)!=NULL) {//read an encrypted tweet
                     decrypted[0]=0;
                     decrypt(tweets,decrypted);
                     fprintf(foutp,"%s\n",decrypted);
@@ -93,6 +130,9 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
                 fclose(finp);
                 fclose(foutp);
                 printf("[%s] Process ID #%d decrypted %s successfully.\n",getcurtime(),getpid(),encfile);
+				write(cfd, CHILD_SUCCESS, MAXLENGTH);
+				printf("this is child encfile: %s\n",encfile);
+				write(cfd, encfile, MAXLENGTH);
             }
         }
     }
@@ -101,6 +141,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
     free(decfile);
     free(tweets);
     free(decrypted);
+	free(errmsg);
     return retv;
 }
 
@@ -109,7 +150,7 @@ int main(int argc, char **argv){
 	char *encfile, *decfile, *buf;
 	fd_set rfds;
 	int i,tmp;
-	int children, currentchild;
+	int children;
 	int cores, nfds;
 	int pipenum;
 	int sockfd;
@@ -157,8 +198,7 @@ int main(int argc, char **argv){
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(atoi(argv[2]));
 	//printf("port:%d\n",atoi(argv[2]));
-	if(inet_pton(AF_INET, argv[1], &addr.sin_addr)<=0)
-    {
+	if(inet_pton(AF_INET, argv[1], &addr.sin_addr)<=0) {
         printf("\n inet_pton error occured\n");
         return 1;
     } 
@@ -238,7 +278,6 @@ int main(int argc, char **argv){
 		}
 	}
 	
-	currentchild = 0;
 	while(1){
 		FD_ZERO(&rfds);
 		for(i = 0; i < cores-1; ++i)
@@ -262,29 +301,53 @@ int main(int argc, char **argv){
 					read(sockfd, encfile, MAXLENGTH);
 					read(sockfd, decfile, MAXLENGTH);
 					printf("[%s] Child process ID #%d will decrypt %s.\n", getcurtime(), childprocess[i], encfile);
-					write(pipepfd[currentchild][1], encfile, MAXLENGTH);
-					write(pipepfd[currentchild][1], decfile, MAXLENGTH);
+					write(pipepfd[i][1], encfile, MAXLENGTH);
+					write(pipepfd[i][1], decfile, MAXLENGTH);
 				}
 				else {
-					//read remaining messages in pipes
-					/*for(j = 0; j < cores-1; ++j) {
-						if(i == j)
-							continue;
-						read(pipecfd[j][0], buf, MAXLENGTH);
-					}*/
-					//close
 					break;
-					exit(0);
 				}
 			}
-			else{ // child process encounters a fatal error
-				
+			else if(strcmp(buf, CHILD_SUCCESS) == 0) {
+				read(pipecfd[i][0], buf, MAXLENGTH);
+				status = LCSUCC;
+				write(sockfd, &status, MAXLENGTH);
+				printf("this is parent: i: %d encfile:%s\n", i, buf);
+				write(sockfd, buf, MAXLENGTH);
+			}
+			else if(strcmp(buf, CHILD_ERROR) == 0) { // child process encounters an error which can be fixed
+				status = LCFAIL;
+				write(sockfd, &status, MAXLENGTH);
+				read(pipecfd[i][0], buf, MAXLENGTH);
+				write(sockfd, buf, MAXLENGTH);
+			}
+			else { // child process encounters an error which can be fixed
+				status = LCFAIL;
+				write(sockfd, &status, MAXLENGTH);
+				strcpy(buf, "Unable to call malloc in process ");
+				strcat(buf, itoa(childprocess[i], encfile));
+				write(sockfd, buf, MAXLENGTH);
+				break;
 			}
 		}
 	}
 	for(i = 0; i < cores-1; ++i) {
 		close(pipepfd[i][1]);
-		while(read(pipecfd[i][0], buf, MAXLENGTH));
+		while(read(pipecfd[i][0], buf, MAXLENGTH)){
+			if(strcmp(buf, CHILD_SUCCESS) == 0) {
+				read(pipecfd[i][0], buf, MAXLENGTH);
+				status = LCSUCC;
+				write(sockfd, &status, MAXLENGTH);
+				printf("this is parent: i: %d encfile:%s\n", i, buf);
+				write(sockfd, buf, MAXLENGTH);
+			}
+			else if(strcmp(buf, CHILD_ERROR) == 0 || strcmp(buf, CHILD_FERROR) == 0) { // child process encounters an error
+				status = LCFAIL;
+				write(sockfd, &status, MAXLENGTH);
+				read(pipecfd[i][0], buf, MAXLENGTH);
+				write(sockfd, buf, MAXLENGTH);
+			}
+		}
 		close(pipecfd[i][0]);
 	}
 
@@ -315,6 +378,7 @@ int main(int argc, char **argv){
             }
 		}
     }
+	printf("%s\n", itoa(3134, buf));
 	free(encfile);
 	free(decfile);
 	free(buf);
