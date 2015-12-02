@@ -1,3 +1,11 @@
+#Author:			Weida Pan
+#student nunmber:	301295773
+#SFU user name: 	lykonp
+#lecture section:	D1
+#instructor:		Brian G. Booth
+#TA:				Scott Kristjanson
+#date:				Dec. 1, 2015
+
 CC = gcc
 
 #options of gcc command
@@ -30,8 +38,8 @@ lyrebird.server:	$(OBJS1)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -f *.0
-	rm lyrebird.clent
-	rm lyrebird.server
-	rm memwatch.log
+	rm -f *.o
+	rm -f lyrebird.client
+	rm -f lyrebird.server
+	rm -f memwatch.log
 	rm -f core

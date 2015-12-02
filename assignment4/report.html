@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Report</title>
+	</head>
+	<body>
+		<h1>Report</h1>	
+		<div>
+		by Weida Pan<br>
+		student number: 301295773<br> 
+		SFU user name: lykonp<br>
+		lecture section: D1<br>
+		instructor: Brian G. Booth<br>
+		TA: Scott Kristjanson<br>
+		</div>
+		<h2>Assignment Overview</h2>
+		<div>
+		Based on the former assignments, all of which only make use of resources on a single machine, this assignment is extended to multiple machine implementation with an architecture of server-client. Server creates socket for client to connect and communicate with clients through socket. While client program has the same structure as assignment 3. Client creates child processes up to the number of cores on the running machine, including itself, and use pipe to communicate with child processes.
+		</div>
+		<h2>Design And Implementation</h2>
+		<div>
+			<h3>Server:</h3>
+			Server gets IP address of machine where it is running and creates a socket. Then server ask OS for a random available port and bind IP and port number with socket and listen so that it can handle client connection request. When a client connects, server gets a socket for that client and stores its information in an array. Server sends decryption file names to client and gets feedback through socket. When all descryptions are done, server sends messages to tell client who is ready to exit. It will keep reading from sockets until all clients disconnect.
+			<br>
+			Server-client protocol is : <br>
+			Server sends work message followed by decryption file names if there are tasks undone.<br> 
+			server sends exit message if all tasks are done.<br>
+			Client sends ready message indicating it is ready for decryption.<br>
+			Client sends success message indicating it successfully decrypted a file, followed by file name.<br>
+			Client sends failure message indicating it failed to decrypt a file, followed by error message.<br>
+			<h3>Client:</h3>
+			Client has the same structure as assignment 3. The only difference is that when client gets ready information from child process, it sends ready information to server and receives decrytion file names in socket instead of reading it directly from a file. Meanwhile, parent process, forwards all messages from child processes including ready, success, failure message to server. When it gets exit message from server, it closes writing pipes to tell child processes to exit and read remaining messages and forward them to server. Client waits for all child processes to exit and close socket.
+			<br><br>
+			<br>
+		</div>
+		<h2>Testing</h2>
+		<div>
+			Testing is done in 4 steps.<br>
+			Step 1: Module testing. Whenever I implemented a module, like creating socket, client connects to server, server and client communicate through socket, client creating pipes and communicating with child process, waiting for child processes to exit, I tested the correctness of the module. This is done by print some messages to terminal.<br>
+			Step 2: Static debugging. Check the code and find out typing mistakes or the order of some modules.<br>
+			Step 3: Run sample testing cases and compare my output with standard output. First open a terminal to run server then open another to run client to test. Then run server on another machine to test.<br>
+		</div>
+	</body>
+</html>

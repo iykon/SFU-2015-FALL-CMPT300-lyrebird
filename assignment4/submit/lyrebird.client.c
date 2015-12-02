@@ -109,6 +109,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
 	errmsg = (char *)malloc(MAXLENGTH*sizeof(char));
 
     if(tweets==NULL || decrypted==NULL || encfile==NULL || decfile==NULL){ //fail to malloc
+        printf("[%s] Child process ID #%d failed to call malloc.\n",getcurtime(),getpid());
         write(cfd,CHILD_FERROR,MAXLENGTH);
         retv = 1;
     }
@@ -127,6 +128,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
 				strcat(errmsg, itoa(getpid(), tweets));
 				write(cfd, CHILD_ERROR, MAXLENGTH);
 				write(cfd, errmsg, MAXLENGTH);
+                printf("[%s] Child process ID #%d could not find file %s.\n",getcurtime(),getpid(),encfile);
             }
             else{//start decrypting
                 finp = fopen(encfile,"r");
@@ -138,6 +140,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
 					strcat(errmsg, itoa(getpid(), tweets));
 					write(cfd, CHILD_ERROR, MAXLENGTH);
 					write(cfd, errmsg, MAXLENGTH);
+                    printf("[%s] Child process ID #%d failed to open file %s.\n",getcurtime(),getpid(),encfile);
                     continue;
                 }
                 foutp=fopen(decfile,"w+");
@@ -149,6 +152,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
 					strcat(errmsg, itoa(getpid(), tweets));
 					write(cfd, CHILD_ERROR, MAXLENGTH);
 					write(cfd, errmsg, MAXLENGTH);
+                    printf("[%s] Child process ID #%d failed to open file %s.\n",getcurtime(),getpid(),decfile);
                     fclose(finp);
                     continue;
                 }
@@ -159,6 +163,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
                 }
                 fclose(finp);
                 fclose(foutp);
+                printf("[%s] Process ID #%d decrypted %s successfully.\n",getcurtime(),getpid(),encfile);
 				//notify parent process success
 				write(cfd, CHILD_SUCCESS, MAXLENGTH);
 				write(cfd, encfile, MAXLENGTH);
@@ -233,13 +238,11 @@ int main(int argc, char **argv){
 	addr.sin_port = htons(atoi(argv[2])); // set port
 	if(inet_pton(AF_INET, argv[1], &addr.sin_addr)<=0) {
 		printf("[%s] Process ID %d failed to call inet_pton.\n", getcurtime(), getpid());
-		close(sockfd);
 		terminate(EXIT_FAILURE);
     } 
 	// connect to server
 	if(connect(sockfd, (struct sockaddr *)&addr, sizeof(addr))<0){
 		printf("[%s] Process ID %d failed to call connect.\n", getcurtime(), getpid());
-		close(sockfd);
 		terminate(EXIT_FAILURE);
 	}
 	printf("[%s] lyrebird client: PID %d connected to server %s on port %s.\n", getcurtime(), getpid(), argv[1], argv[2]);
@@ -248,12 +251,10 @@ int main(int argc, char **argv){
 	for(i=0;i<cores-1;++i){
         if(pipe(pipepfd[i])==-1){
             printf("[%s] Process ID #%d failed to create pipes.\n",getcurtime(),getpid());
-			close(sockfd);
 			terminate(EXIT_FAILURE);
         }
         if(pipe(pipecfd[i])==-1){
             printf("[%s] Process ID #%d failed to create pipes.\n",getcurtime(),getpid());
-			close(sockfd);
 			terminate(EXIT_FAILURE);
         }
         // get the nfds for select()
@@ -272,7 +273,6 @@ int main(int argc, char **argv){
 		pid = fork();
 		if(pid == -1) {
 			printf("[%s] Process ID #%d failed to call fork.\n", getcurtime(), getpid());
-			close(sockfd);
 			terminate(EXIT_FAILURE);
 		}
 		else if(pid == 0){ // in child process
@@ -326,7 +326,6 @@ int main(int argc, char **argv){
 		retv = select(nfds, &rfds, NULL, NULL, NULL);
 		if(retv == -1){
 			printf("[%s] Process ID #%d failed to call select.\n", getcurtime(), getpid());
-			close(sockfd);
 			terminate(EXIT_FAILURE);
 		}
 		else if(retv) {
@@ -345,6 +344,7 @@ int main(int argc, char **argv){
 				if(buf[0] == LSWORK) {
 					read(sockfd, encfile, MAXLENGTH);
 					read(sockfd, decfile, MAXLENGTH);
+					printf("[%s] Child process ID #%d will decrypt %s.\n", getcurtime(), childprocess[i], encfile);
 					write(pipepfd[i][1], encfile, MAXLENGTH);
 					write(pipepfd[i][1], decfile, MAXLENGTH);
 				}
@@ -418,17 +418,20 @@ int main(int argc, char **argv){
 			endid = waitpid(childprocess2[i], &status, WNOHANG|WUNTRACED);
             if(endid==-1){// error calling waitpid
                 printf("[%d] Fail to call waitpid().\n",childprocess2[i]);
-				close(sockfd);
 				terminate(EXIT_FAILURE);
             }
             else if(endid==0){//child still running
             	childprocess[children++] = childprocess2[i];//put the child process back into the queue, check it later
             }
             else{//child ended
+            	if(WIFEXITED(status)){//terminate normally
+					printf("[%s] Child process ID #%d exited successfully.\n", getcurtime(), childprocess2[i]);
+				}
+            	else if(WIFSIGNALED(status)){//terminate abnormally
+            		printf("[%s] Child process ID #%d did not terminate successfully.\n",getcurtime(),childprocess2[i]);
+            	}
             }
 		}
     }
-	printf("[%s] lyrebird client: PID %d completed its tasks and is exiting successfully.\n", getcurtime(), getpid());
-	close(sockfd);
 	terminate(EXIT_SUCCESS);
 }

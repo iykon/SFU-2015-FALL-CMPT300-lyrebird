@@ -1,0 +1,86 @@
+0. Author information:
+	name:            Weida Pan
+	student ID:	 	 301295773
+	SFU user name:   lykonp
+	lecture section: D1
+	instructor:      Brian G. Booth
+	TA:              Scott Kristjanson
+	
+
+1. Project Overview
+
+This is a project for assignment 4: A Distributed Flock of lyrebirds.
+Based on former projects, this project has more extentions. The limitation of former projects is that it can only run on a single machine. Now it is extended so that it uses a server-client architecture to take advantage of multiple machines. So it cantains two programs. One is lyrebird.server.c, which is server. The other is lyrebird.client.c, which is client.
+ * Server will get the IP address of running server and create a socket and wait for connections of clients.
+ * Server can accept a new connection request at any time. 
+ * Clients ask server for tasks and server offers them. All messages are passed through sockets.
+ * Client gets the number of cores of running machine and creates child processes up to that number, including itself, for descryption. 
+ * Parent process communicates with child processes only through pipes, as in assignment 3. Child process gets decryption files from pipe from parent process, and sends back if it is success or failure. If any error happens, child process sends error message to parent, which forwards that message to server.
+ * When all descryptions are done, server tells all clients to exit cleanly. Clients will wait until all child processes exit.
+
+2. Algorithm details
+Here are some details.
+ * After server gets IP address of running machine, it asks OS for a random available port number and binds them with the socket. Then it calls listen so that it can accepts connections.
+ * When a client connects, a new socket is created for communicating. Those sockets with the socket for listening requests and put into an array together. Server calls poll to deal with new messages.
+ * Server and client communicate under the following protocol.
+ 		Client sends ready information indicating it is ready for descryption. Then it waits for decryption files.
+		Client sends success information indicating it succeeded to decrypt the last decryption, followed by the file name it decrypted;
+		Client sends failure information indicating it failed to decrypt the last decryption, followed by an error message;
+		Client gets exit information then wait child processes to exit.
+		Server gets ready information and write decryption file names into sockets if there are tasks lef to be done;
+		Server gets success information and read file name from socket and output this information into log file;
+		Server gets failure information and read error message from socket and output this information into log file;
+		Server sends exit information if all tasks are done.
+ * On client, parent process communicates with child process under following protocol.
+ 		Child sends ready information indicating it is ready for descryption. Then it waits for decryption files.
+		Child sends success information indicating it succeeded to decrypt the last decryption, followed by the file name it decrypted.
+		Child sends normal failure information indicating it failed to decrypt the last decryption but it can continue running, followed by the file name it decrypted.
+		Child sends fatal error information indicating it encountered a fatal error.
+		Parent gets ready information and write decryption file names into pipes if it gets them from server.
+ 
+3. Structure details
+
+The packet contains 9 files. 
+ * lyrebird.server.c: Server program.
+ * lyrebird.client.c: Client program.
+ * decrypt.c: Defines all functions for decrypting.
+ * decrypt.h: Declares all functions and some constants for decrypting.
+ * scheduling.h: Defines some macros as the protocol for the message format between child process and parent process.
+ * msgprotocol.h: Defines some macros as prototol for message passing between server and client.
+ * Makefile: A bash script to link and compile all related files and generate executable file.
+ * report.html: A html file as a report for this project.
+ * README: This file you are reading as an instruction. 
+
+
+4. Instructions:
+To run the project correctly, see the following instructions.
+
+	$ make
+This helps you compile the programs and generate an executable file lyrebird.
+	
+	$ ./lyrebird.server <config_file> <log_file>
+By doing this, you run server on the machine. And you can see on terminal a message telling you the IP address and port number.
+	
+	$ ./lyrebird.client <IP> <port>
+IP and port number are those you see after you run lyrebird.server.
+
+	$ make clean
+This helps you delete .o files, core, the executable file lyrebird and .log file produced by memwatch.
+
+5: reference list:
+http://man7.org/linux/man-pages/man2/getsockname.2.html
+http://linux.die.net/man/3/shutdown
+http://stackoverflow.com/questions/4160347/close-vs-shutdown-socket
+http://www.faqs.org/faqs/unix-faq/socket/
+https://sourceware.org/bugzilla/show_bug.cgi?id=13660
+http://linux.die.net/man/2/poll
+http://www.retran.com/beej/sockaddr_inman.html
+http://stackoverflow.com/questions/9260937/unix-socket-error-14-efault-bad-address
+http://stackoverflow.com/questions/5950395/makefile-to-compile-multiple-c-programs
+http://linux.die.net/man/2/socket
+http://linux.die.net/man/3/accept
+http://linux.die.net/man/2/bind
+http://man7.org/linux/man-pages/man3/getifaddrs.3.html
+http://linux.die.net/man/3/setsockopt
+http://stackoverflow.com/questions/2283494/get-ip-address-of-an-interface-on-linux
+http://stackoverflow.com/questions/2021549/how-do-i-output-my-host-s-ip-addresses-from-a-c-program
