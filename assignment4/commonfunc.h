@@ -14,6 +14,7 @@ date: 			 Dec. 1, 2015
 
 #include <time.h>
 #include <unistd.h>
+#include <string.h>
 
 /* 
  * function: getcurtime
