@@ -169,7 +169,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
     free(encfile);
     free(decfile);
     free(tweets);
-    free(decfile);
+    free(decrypted);
 	free(errmsg);
     return retv;
 }
@@ -183,7 +183,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
 void terminate(int exitv){
 	free(buf);
 	free(encfile);
-	free(decrypted);
+	free(decfile);
 	exit(exitv);
 }
 
