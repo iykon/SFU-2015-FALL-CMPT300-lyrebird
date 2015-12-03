@@ -1,1 +1,4 @@
 *.swp
+./assignment4/*.o
+./assignment4/*.log
+./assignment4/log
