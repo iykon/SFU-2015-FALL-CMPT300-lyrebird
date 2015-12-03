@@ -383,7 +383,7 @@ int main(int argc, char **argv){
 		while(read(pipecfd[i][0], buf, MAXLENGTH)){
 			if(strcmp(buf, CHILD_SUCCESS) == 0) {
 				// report success to server
-				strcpy(buf, LCFAIL);
+				strcpy(buf, LCSUCC);
 				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, strlen(buf)+1);
