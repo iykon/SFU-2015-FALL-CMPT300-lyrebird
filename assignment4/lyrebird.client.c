@@ -32,7 +32,7 @@
 #include "decrypt.h"
 #include "memwatch.h"
 #include "msgprotocol.h"
-#include "commonfunc.c"
+#include "commonfunc.h"
 
 #define MAXLENGTH 1100  // maximum length of file name and tweets
 #define MAXCORES 32

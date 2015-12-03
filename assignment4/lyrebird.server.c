@@ -165,7 +165,7 @@ int main(int argc, char **argv){
 	addrs = 1;
 	sockopt = 1;
 	// set socket option so that can be used below
-	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (char *)&sockopt, sizeof(sockopt) < 0 ){
+	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (char *)&sockopt, sizeof(sockopt)) < 0 ){
 		printf("[%s] lyrebird.server PID %d failed to call setsockopt.\n", getcurtime(), getpid());
 		terminate(EXIT_FAILURE);
 	}
