@@ -101,11 +101,12 @@ void terminate(int exitv){
 	int i;
 	for(i = 0; i < nfds; ++i) 
 		close(fds[i].fd);
+	free(ipaddress);
 	free(buf);
 	free(encfile);
 	free(decfile);
-	free(fcfg);
-	free(flog);
+	fclose(fcfg);
+	fclose(flog);
 	exit(exitv);
 }
 
@@ -262,24 +263,26 @@ int main(int argc, char **argv){
 					if(EOF == fscanf(fcfg, "%s", encfile)) { // all tasks distributed
 						taskover = 1;
 						//tell clients to exit
-						status = LSDONE;
-						write(fds[i].fd, &status, MAXLENGTH);
+						//status = LSDONE;
+						strcpy(buf, LSDONE);
+						write(fds[i].fd, buf, MAXLENGTH);
 						continue;
 					}
 					//tell client to work
-					status = LSWORK;
-					write(fds[i].fd, &status, MAXLENGTH);
+					//status = LSWORK;
+					strcpy(buf, LSWORK);
+					write(fds[i].fd, buf, MAXLENGTH);
 					write(fds[i].fd, encfile, MAXLENGTH);
 					fscanf(fcfg, "%s", decfile);
-					printf("%s %s\n", encfile, decfile);
+					//printf("%s %s\n", encfile, decfile);
 					write(fds[i].fd, decfile, MAXLENGTH);
 					fprintf(flog, "[%s] The lyrebird client %s has been given the task of decrypting %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), encfile);
 				}
-				else if(buf[0] == LCFAIL) { // client failed due to some error
+				else if(strcmp(buf, LCFAIL) == 0) { // client failed due to some error
 					read(fds[i].fd, buf, MAXLENGTH); // read error message
 					fprintf(flog, "[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), buf);
 				}
-				else if(buf[0] == LCSUCC) { // client successfully decrypted a file
+				else if(strcmp(buf, LCSUCC) == 0) { // client successfully decrypted a file
 					read(fds[i].fd, buf, MAXLENGTH); // read the file name
 					fprintf(flog, "[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
 				}
