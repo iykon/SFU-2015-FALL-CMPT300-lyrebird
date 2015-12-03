@@ -19,11 +19,11 @@
 		<h2>Design And Implementation</h2>
 		<div>
 			<h3>Server:</h3>
-			Server gets IP address of machine where it is running and creates a socket. Then server ask OS for a random available port and bind IP and port number with socket and listen so that it can handle client connection request. When a client connects, server gets a socket for that client and stores its information in an array. Server sends decryption file names to client and gets feedback through socket. When all descryptions are done, server sends messages to tell client who is ready to exit. It will keep reading from sockets until all clients disconnect.
+			Server gets IP address of machine where it is running and creates a socket. Then server ask OS for a random available port and bind IP and port number with socket and listen so that it can handle client connection request. When a client connects, server has a socket for that client and stores its information in a list. Server check all sockets regularly to get new connection requests or new messages. When server read 0 bytes from a client, server decides this client has disconnected. Server sends decryption file names to client and gets feedback through socket. When all descryptions are done, server sends messages to tell client who is ready to exit. It will keep reading from sockets until all clients disconnect. 
 			<br>
 			Server-client protocol is : <br>
-			Server sends work message followed by decryption file names if there are tasks undone.<br> 
-			server sends exit message if all tasks are done.<br>
+			In response to a ready message from client, server sends work message followed by decryption file names if there are tasks undone.<br> 
+			In response to a ready message from client, server sends exit message if all tasks are done.<br>
 			Client sends ready message indicating it is ready for decryption.<br>
 			Client sends success message indicating it successfully decrypted a file, followed by file name.<br>
 			Client sends failure message indicating it failed to decrypt a file, followed by error message.<br>
@@ -35,9 +35,11 @@
 		<h2>Testing</h2>
 		<div>
 			Testing is done in 4 steps.<br>
-			Step 1: Module testing. Whenever I implemented a module, like creating socket, client connects to server, server and client communicate through socket, client creating pipes and communicating with child process, waiting for child processes to exit, I tested the correctness of the module. This is done by print some messages to terminal.<br>
+			Step 1: Module testing. Whenever I implemented a module, like creating socket, client connects to server, server and client communicate through socket and so on, I tested the correctness of the module. This is done by print some messages to terminal.<br>
 			Step 2: Static debugging. Check the code and find out typing mistakes or the order of some modules.<br>
-			Step 3: Run sample testing cases and compare my output with standard output. First open a terminal to run server then open another to run client to test. Then run server on another machine to test.<br>
+			Step 3: Test the correctness by running server and client on the same machine. Check the decrypted tweets content and output message and log to verify correctness.<br>
+			Step 4: Test the correctness by running server and client on multiple machines. Connected up to 5 clients.<br>
+			Details of test cases. I tested normal size of encrypted tweets and extremely large size of encrypted tweets. I tested a small number of decryptions and a large number up to 100000. I tested small length of file path as well as 1024 bytes of file name length with some exists and some don't.
 		</div>
 	</body>
 </html>

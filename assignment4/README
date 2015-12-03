@@ -11,17 +11,30 @@
 
 This is a project for assignment 4: A Distributed Flock of lyrebirds.
 Based on former projects, this project has more extentions. The limitation of former projects is that it can only run on a single machine. Now it is extended so that it uses a server-client architecture to take advantage of multiple machines. So it cantains two programs. One is lyrebird.server.c, which is server. The other is lyrebird.client.c, which is client.
+
  * Server will get the IP address of running server and create a socket and wait for connections of clients.
+
  * Server can accept a new connection request at any time. 
+
  * Clients ask server for tasks and server offers them. All messages are passed through sockets.
+
  * Client gets the number of cores of running machine and creates child processes up to that number, including itself, for descryption. 
+
  * Parent process communicates with child processes only through pipes, as in assignment 3. Child process gets decryption files from pipe from parent process, and sends back if it is success or failure. If any error happens, child process sends error message to parent, which forwards that message to server.
+
  * When all descryptions are done, server tells all clients to exit cleanly. Clients will wait until all child processes exit.
 
 2. Algorithm details
 Here are some details.
+
  * After server gets IP address of running machine, it asks OS for a random available port number and binds them with the socket. Then it calls listen so that it can accepts connections.
- * When a client connects, a new socket is created for communicating. Those sockets with the socket for listening requests and put into an array together. Server calls poll to deal with new messages.
+
+ * When a client connects, a new socket is created for communicating. Those sockets with the socket for listening requests and put into an array together. Then server calls poll to deal with new messages.
+
+ * When server read 0 bytes from a socket, which indicating the socket of client is closed, server can know that this client disconnected and thus delete this client from the list.
+
+ * Unlike pipe, when reading from socket, I choose to read one character by one character in sake of avoiding some mysterious errors.
+
  * Server and client communicate under the following protocol.
  		Client sends ready information indicating it is ready for descryption. Then it waits for decryption files.
 		Client sends success information indicating it succeeded to decrypt the last decryption, followed by the file name it decrypted;
@@ -31,6 +44,7 @@ Here are some details.
 		Server gets success information and read file name from socket and output this information into log file;
 		Server gets failure information and read error message from socket and output this information into log file;
 		Server sends exit information if all tasks are done.
+
  * On client, parent process communicates with child process under following protocol.
  		Child sends ready information indicating it is ready for descryption. Then it waits for decryption files.
 		Child sends success information indicating it succeeded to decrypt the last decryption, followed by the file name it decrypted.
@@ -40,19 +54,22 @@ Here are some details.
  
 3. Structure details
 
-The packet contains 9 files. 
+The packet contains 11 files. 
+
  * lyrebird.server.c: Server program.
  * lyrebird.client.c: Client program.
  * decrypt.c: Defines all functions for decrypting.
  * decrypt.h: Declares all functions and some constants for decrypting.
  * scheduling.h: Defines some macros as the protocol for the message format between child process and parent process.
  * msgprotocol.h: Defines some macros as prototol for message passing between server and client.
+ * commonfunc.h: Declares common functions of server and client.
+ * commonfunc.h: Defines common functions of server and client.
  * Makefile: A bash script to link and compile all related files and generate executable file.
  * report.html: A html file as a report for this project.
  * README: This file you are reading as an instruction. 
 
-
 4. Instructions:
+
 To run the project correctly, see the following instructions.
 
 	$ make
