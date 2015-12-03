@@ -1,25 +1,37 @@
 <html>
 	<head>
 		<title>Report</title>
+		<style>
+			h1 {
+			}
+			div#overall{
+				margin-left: 10%;
+				margin-right: 10%;
+			}
+ 
+		</style>
 	</head>
 	<body>
-		<h1>Report</h1>	
-		<div>
-		by Weida Pan<br>
-		student number: 301295773<br> 
+		<div id = "overall">
+		<center><h1>Report of A Flock of Distributed lyrebirds</h1></center>
+		<div align="center">
+		Author: Weida Pan<br>
+		Student number: 301295773<br> 
 		SFU user name: lykonp<br>
-		lecture section: D1<br>
-		instructor: Brian G. Booth<br>
+		Lecture section: D1<br>
+		Instructor: Brian G. Booth<br>
 		TA: Scott Kristjanson<br>
 		</div>
+		<hr>
+		<br>
 		<h2>Assignment Overview</h2>
 		<div>
-		Based on the former assignments, all of which only make use of resources on a single machine, this assignment is extended to multiple machine implementation with an architecture of server-client. Server creates socket for client to connect and communicate with clients through socket. While client program has the same structure as assignment 3. Client creates child processes up to the number of cores on the running machine, including itself, and use pipe to communicate with child processes.
+		Based on the former assignments, all of which only make use of resources on a single machine, this assignment is extended to multiple machines implementation with an architecture of server-client. Server creates socket for client to connect and communicate with clients through socket. It is server's job to tell clients to work to exit, and gives them file names of decryptions. Server keeps track of all clients' connections and disconnections and job distributions and success or failure of every job. While client program has the same structure as assignment 3. Client creates child processes up to the number of cores on the running machine, including itself, and use pipe to communicate with child processes. Client gets decryption files from server and send it to child processes. Both of them uses the scheduling method of FCFS.
 		</div>
 		<h2>Design And Implementation</h2>
 		<div>
-			<h3>Server:</h3>
-			Server gets IP address of machine where it is running and creates a socket. Then server ask OS for a random available port and bind IP and port number with socket and listen so that it can handle client connection request. When a client connects, server has a socket for that client and stores its information in a list. Server check all sockets regularly to get new connection requests or new messages. When server read 0 bytes from a client, server decides this client has disconnected. Server sends decryption file names to client and gets feedback through socket. When all descryptions are done, server sends messages to tell client who is ready to exit. It will keep reading from sockets until all clients disconnect. 
+			<h3>lyrebird server:</h3>
+			Server gets IP address of machine where it is running and creates a socket. Then server ask OS for a random available port and bind IP and port number with socket and listen so that it can handle client connection request. When a client connects, server has a socket for that client and stores its information in a list. Server check all sockets regularly to get new connection requests or new messages. When server read 0 bytes from a client, server decides this client has disconnected. Server sends decryption file names to client and gets feedback through socket. When all decryptions are done, server sends messages to tell client who is ready to exit. It will keep reading from sockets until all clients disconnect. 
 			<br>
 			Server-client protocol is : <br>
 			In response to a ready message from client, server sends work message followed by decryption file names if there are tasks undone.<br> 
@@ -27,19 +39,19 @@
 			Client sends ready message indicating it is ready for decryption.<br>
 			Client sends success message indicating it successfully decrypted a file, followed by file name.<br>
 			Client sends failure message indicating it failed to decrypt a file, followed by error message.<br>
-			<h3>Client:</h3>
-			Client has the same structure as assignment 3. The only difference is that when client gets ready information from child process, it sends ready information to server and receives decrytion file names in socket instead of reading it directly from a file. Meanwhile, parent process, forwards all messages from child processes including ready, success, failure message to server. When it gets exit message from server, it closes writing pipes to tell child processes to exit and read remaining messages and forward them to server. Client waits for all child processes to exit and close socket.
-			<br><br>
+			<h3>lyrebird client:</h3>
+			Client has the same structure as assignment 3. Differences are that when client gets ready information from child process, it sends ready information to server and receives decryption files in socket instead of reading it directly from a file. Meanwhile, parent process forwards all messages from child processes including ready, success, failure message to server. When it gets exit message from server, it closes writing pipes to tell child processes to exit and read remaining messages and forward them to server. Client waits for all child processes to exit by calling wait() and then closes socket.
 			<br>
 		</div>
 		<h2>Testing</h2>
 		<div>
-			Testing is done in 4 steps.<br>
-			Step 1: Module testing. Whenever I implemented a module, like creating socket, client connects to server, server and client communicate through socket and so on, I tested the correctness of the module. This is done by print some messages to terminal.<br>
-			Step 2: Static debugging. Check the code and find out typing mistakes or the order of some modules.<br>
-			Step 3: Test the correctness by running server and client on the same machine. Check the decrypted tweets content and output message and log to verify correctness.<br>
+			Testing is done in 4 steps.<br><br>
+			Step 1: Static debugging. Check the code and find out typing mistakes or the order of some modules.<br>
+			Step 2: Module testing. Whenever I implemented a module, like creating socket, client connects to server, server and client communicate through socket and so on, I tested the correctness of the module. This is done by print some messages to terminal.<br>
+			Step 3: Test the correctness by running server and client on the same machine. Check the decrypted tweets content and output message on terminal of both client and server and log file to verify correctness.<br>
 			Step 4: Test the correctness by running server and client on multiple machines. Connected up to 5 clients.<br>
-			Details of test cases. I tested normal size of encrypted tweets and extremely large size of encrypted tweets. I tested a small number of decryptions and a large number up to 100000. I tested small length of file path as well as 1024 bytes of file name length with some exists and some don't.
+			Details of test cases. First I tested normal size of encrypted tweets and extremely large size of encrypted tweets. Then I tested a small number of decryptions in a config file and a large number of up to 100000. Next I tested some small length of file names as well as 1024 bytes of file name length with some exists and some don't.
+		</div>
 		</div>
 	</body>
 </html>

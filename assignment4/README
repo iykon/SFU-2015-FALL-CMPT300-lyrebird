@@ -10,7 +10,7 @@
 1. Project Overview
 
 This is a project for assignment 4: A Distributed Flock of lyrebirds.
-Based on former projects, this project has more extentions. The limitation of former projects is that it can only run on a single machine. Now it is extended so that it uses a server-client architecture to take advantage of multiple machines. So it cantains two programs. One is lyrebird.server.c, which is server. The other is lyrebird.client.c, which is client.
+Based on former projects, this project has more extensions. The limitation of former projects is that it can only run on a single machine. Now it is extended so that it uses a server-client architecture to take advantage of multiple machines. So it contains two programs. One is lyrebird.server.c, which is server. The other is lyrebird.client.c, which is client.
 
  * Server will get the IP address of running server and create a socket and wait for connections of clients.
 
@@ -18,11 +18,11 @@ Based on former projects, this project has more extentions. The limitation of fo
 
  * Clients ask server for tasks and server offers them. All messages are passed through sockets.
 
- * Client gets the number of cores of running machine and creates child processes up to that number, including itself, for descryption. 
+ * Client gets the number of cores of running machine and creates child processes up to that number, including itself, for decryption. 
 
  * Parent process communicates with child processes only through pipes, as in assignment 3. Child process gets decryption files from pipe from parent process, and sends back if it is success or failure. If any error happens, child process sends error message to parent, which forwards that message to server.
 
- * When all descryptions are done, server tells all clients to exit cleanly. Clients will wait until all child processes exit.
+ * When all decryptions are done, server tells all clients to exit cleanly. Clients will wait until all child processes exit.
 
 2. Algorithm details
 Here are some details.
@@ -36,17 +36,17 @@ Here are some details.
  * Unlike pipe, when reading from socket, I choose to read one character by one character in sake of avoiding some mysterious errors.
 
  * Server and client communicate under the following protocol.
- 		Client sends ready information indicating it is ready for descryption. Then it waits for decryption files.
+ 		Client sends ready information indicating it is ready for decryption. Then it waits for decryption files.
 		Client sends success information indicating it succeeded to decrypt the last decryption, followed by the file name it decrypted;
 		Client sends failure information indicating it failed to decrypt the last decryption, followed by an error message;
 		Client gets exit information then wait child processes to exit.
-		Server gets ready information and write decryption file names into sockets if there are tasks lef to be done;
+		Server gets ready information and write decryption file names into sockets if there are tasks left to be done;
 		Server gets success information and read file name from socket and output this information into log file;
 		Server gets failure information and read error message from socket and output this information into log file;
 		Server sends exit information if all tasks are done.
 
  * On client, parent process communicates with child process under following protocol.
- 		Child sends ready information indicating it is ready for descryption. Then it waits for decryption files.
+ 		Child sends ready information indicating it is ready for decryption. Then it waits for decryption files.
 		Child sends success information indicating it succeeded to decrypt the last decryption, followed by the file name it decrypted.
 		Child sends normal failure information indicating it failed to decrypt the last decryption but it can continue running, followed by the file name it decrypted.
 		Child sends fatal error information indicating it encountered a fatal error.
@@ -61,7 +61,7 @@ The packet contains 11 files.
  * decrypt.c: Defines all functions for decrypting.
  * decrypt.h: Declares all functions and some constants for decrypting.
  * scheduling.h: Defines some macros as the protocol for the message format between child process and parent process.
- * msgprotocol.h: Defines some macros as prototol for message passing between server and client.
+ * msgprotocol.h: Defines some macros as protocol for message passing between server and client.
  * commonfunc.h: Declares common functions of server and client.
  * commonfunc.h: Defines common functions of server and client.
  * Makefile: A bash script to link and compile all related files and generate executable file.
