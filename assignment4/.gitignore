@@ -1,0 +1,6 @@
+*.o
+*.log
+log
+lyrebird.server
+lyrebird.client
+*.swp

@@ -1,5 +1,6 @@
-[Wed Dec  2 18:53:08 2015] Successfully connected to lyrebird client 207.23.175.233.
-[Wed Dec  2 18:53:08 2015] The lyrebird client 207.23.175.233 has been given the task of decrypting ./encrypted_tweets.txt.
-[Wed Dec  2 18:53:08 2015] The lyrebird client 207.23.175.233 has been given the task of decrypting ./encrypted_tweets.txt.
-[Wed Dec  2 18:53:08 2015] The lyrebird client 207.23.175.233 has encountered an error: ./encrypted_tweets.txt.
-[Wed Dec  2 18:53:08 2015] The lyrebird client 207.23.175.233 has disconnected unexpectedly.
+[Thu Dec  3 09:19:20 2015] Successfully connected to lyrebird client 10.211.55.4.
+[Thu Dec  3 09:19:20 2015] The lyrebird client 10.211.55.4 has been given the task of decrypting ./encrypted_tweets.txt.
+[Thu Dec  3 09:19:20 2015] The lyrebird client 10.211.55.4 has successfully decrypted ./encrypted_tweets.txt.
+[Thu Dec  3 09:19:20 2015] The lyrebird client 10.211.55.4 has been given the task of decrypting ./sdf.
+[Thu Dec  3 09:19:20 2015] The lyrebird client 10.211.55.4 has encountered an error: Unable to find file ./sdf in process 1898.
+[Thu Dec  3 09:19:20 2015] The lyrebird client 10.211.55.4 has disconnected expectedly.

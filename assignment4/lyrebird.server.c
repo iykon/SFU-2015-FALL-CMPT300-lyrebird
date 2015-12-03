@@ -295,11 +295,13 @@ int main(int argc, char **argv){
 				else if(strcmp(buf, LCFAIL) == 0) { // client failed due to some error
 					//read(fds[i].fd, buf, MAXLENGTH); // read error message
 					sockread(fds[i].fd, buf);
+					printf("[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), buf);
 					fprintf(flog, "[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), buf);
 				}
 				else if(strcmp(buf, LCSUCC) == 0) { // client successfully decrypted a file
 					//read(fds[i].fd, buf, MAXLENGTH); // read the file name
 					sockread(fds[i].fd, buf);
+					printf("[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
 					fprintf(flog, "[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
 				}
 			}
