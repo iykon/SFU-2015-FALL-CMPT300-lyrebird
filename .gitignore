@@ -2,3 +2,5 @@
 /assignment4/*.o
 /assignment4/*.log
 /assignment4/log
+/assignment4/lyrebird.server
+/assignment4/lyrebird.client
