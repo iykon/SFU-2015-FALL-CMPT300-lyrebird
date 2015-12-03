@@ -169,7 +169,7 @@ int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent proces
     free(encfile);
     free(decfile);
     free(tweets);
-    free(decrypted);
+    free(decfile);
 	free(errmsg);
     return retv;
 }
