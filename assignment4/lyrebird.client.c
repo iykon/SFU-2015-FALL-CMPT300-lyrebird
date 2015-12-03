@@ -351,25 +351,25 @@ int main(int argc, char **argv){
 			if(strcmp(buf, CHILD_READY) == 0) {
 				// tell server it is ready for new task 
 				strcpy(buf, LCREADY);
-				printf("ready message: %s\n", buf);
+				//printf("ready message: %s\n", buf);
 				write(sockfd, buf, MSGLEN);
 				read(sockfd, buf, MSGLEN);
-				printf("child ready and get message from server %s.\n", buf);
+				//printf("child ready and get message from server %s.\n", buf);
 				// server has more tasks, get file names
 				if(strcmp(buf, LSWORK) == 0) {
 					//read(sockfd, encfile, MAXLENGTH);
 					//read(sockfd, decfile, MAXLENGTH);
 					sockread(sockfd, encfile);
-					printf("sockread enc: %s\n",encfile);
+					//printf("sockread enc: %s\n",encfile);
 					sockread(sockfd, decfile);
-					printf("sockread dec: %s\n",decfile);
-					printf("get work: %s %s\n", encfile, decfile);
+					//printf("sockread dec: %s\n",decfile);
+					//printf("get work: %s %s\n", encfile, decfile);
 					write(pipepfd[i][1], encfile, MAXLENGTH);
 					write(pipepfd[i][1], decfile, MAXLENGTH);
 				}
 				// server has done all works
 				else { 
-					printf("done\n");
+					//printf("done\n");
 					break;
 				}
 			}
@@ -380,8 +380,8 @@ int main(int argc, char **argv){
 				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH); // get the decrypted file name
 				write(sockfd, buf, strlen(buf)+1);
-				printf("success message: %s\n",buf);
-				printf("child success of %s.\n", buf);
+				//printf("success message: %s\n",buf);
+				//printf("child success of %s.\n", buf);
 				//sleep(1);
 			}
 			else if(strcmp(buf, CHILD_ERROR) == 0) { // child process encounters an error which can be fixed
@@ -390,11 +390,11 @@ int main(int argc, char **argv){
 				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, strlen(buf)+1);
-				printf("child failure of %s.\n", buf);
+				//printf("child failure of %s.\n", buf);
 			}
 			else { // child process encounters an error which can be fixed
 				// tell server failure and disconnect
-				printf("fatal error, escape!!!!!\n");
+				//printf("fatal error, escape!!!!!\n");
 				strcpy(buf, LCFAIL);
 				write(sockfd, buf, MSGLEN);
 				strcpy(buf, "A fatal error occurred in process ");
