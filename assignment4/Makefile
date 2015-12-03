@@ -12,16 +12,16 @@ CC = gcc
 CFLAGS = -DMEMWATCH -DMW_STDIO -I.
 
 #SRC is all source files
-SRC1 = memwatch.c lyrebird.server.c
-SRC2 = mamwatch.c lyrebird.client.c decrypt.c
+SRC1 = memwatch.c lyrebird.server.c commonfunc.c
+SRC2 = mamwatch.c lyrebird.client.c decrypt.c commonfunc.c
 
 #OBJS is all objects needed for compiling
-OBJS1 = memwatch.o lyrebird.server.o
-OBJS2 = memwatch.o lyrebird.client.o decrypt.o
+OBJS1 = memwatch.o lyrebird.server.o commonfunc.o
+OBJS2 = memwatch.o lyrebird.client.o decrypt.o commonfunc.o
 
 #DEPS is the headers needed
-DEPS1 = memwatch.h 
-DEPS2 = memwatch.h decrypt.h
+DEPS1 = memwatch.h commonfunc.h
+DEPS2 = memwatch.h decrypt.h commonfunc.h
 
 ALL: lyrebird.client lyrebird.server
 

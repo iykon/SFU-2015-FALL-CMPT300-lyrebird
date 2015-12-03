@@ -1,14 +1,19 @@
 /*
-Project: 	 lyrebird (assignment 1)
-Author: 	 Iykon Pan
-SFU user name:	 lykonp
-lecture section: D100
-instructor: 	 Brian G. Booth
-TA:		 Scott Kristjanson
+Project:         A Distributed Flock of lyrebird(assignment 4)
+Author:          Weida Pan
+student number:  301295773
+SFU user name:   lykonp
+lecture section: D1
+instructor:      Brian G. Booth
+TA:              Scott Kristjanson
+date: 			 Dec. 1, 2015
 */
 #include "decrypt.h"
 
-//transfer a character into a digit
+/*
+input a char of char type
+transfer that char into a digit and return
+*/
 int getDigit(char c){
 	switch(c){
 		case ' ': return 0;
@@ -30,7 +35,10 @@ int getDigit(char c){
 	}
 }
 
-//transfer a digit into a character
+/*
+input a digit of int type
+transfer a digit into a character and return
+*/
 char getChar(int d){
 	switch(d){
 		case 0: return ' ';
@@ -48,12 +56,16 @@ char getChar(int d){
 	}
 }
 
-//square c
+//return square of input ull type argument c
 ull sqr(ull c){
 	return c*c;
 }
 
-//exponentiation by squaring which is an efficient exponentiation, and mod n
+/*
+exponentiation by squaring which is an efficient exponentiation, and mod n
+input c,d,n according to formulor M=c^d mod n
+return M in the formulor
+*/
 ull modularExp(ull c, ull d, ull n){
 	if(d==1)	
 		return c;
@@ -63,14 +75,23 @@ ull modularExp(ull c, ull d, ull n){
 		return sqr(modularExp(c,d>>1,n))%n;
 }
 
-//transfer cipher number to plain text number according to the fomular M=C^d mod n
+/*
+the only argument is ull type cipher number
+transfer cipher number to plain text number according to the fomulor M=C^d mod n
+return the plain number
+*/
 ull getPlainnum(ull c){
 	ull plaintextnumber;
 	plaintextnumber=modularExp(c%N,D,N);
 	return plaintextnumber;
 }
 
-//decrypt the input tweets and return a decrypted string
+/*
+decrypt the input tweets and return a decrypted string
+argument tweets is the encrypted tweet
+atgument decrypt is the decrypted tweet
+no return value
+*/
 void decrypt(char *tweets, char *decrypt){
 	int i,j,member;
 	ull ciphernumber,plaintextnumber;
@@ -91,7 +112,7 @@ void decrypt(char *tweets, char *decrypt){
 			plaintextnumber=getPlainnum(ciphernumber);
 			ciphernumber=0;
 			for(j=5;j>=0;--j){//transfer plain text number to 6 characters
-				group[j]=getChar(plaintextnumber%base);
+				group[j]=getChar(plaintextnumber%base);//order these characters
 				plaintextnumber/=base;
 			}
 			decrypt=strcat(decrypt,group);

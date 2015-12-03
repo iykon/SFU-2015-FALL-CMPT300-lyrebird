@@ -1,12 +1,12 @@
 /*
-Project:         Message Passing (assignment 3)
+Project:         A Distributed Flock of lyrebird(assignment 4)
 Author:          Weida Pan
 student number:  301295773
 SFU user name:   lykonp
 lecture section: D1
 instructor:      Brian G. Booth
 TA:              Scott Kristjanson
-date: Nov. 3, 2015
+date: Dec. 1, 2015
 */
 #ifndef DECRYPT_H
 #define DECRYPT_H

@@ -28,34 +28,19 @@
 #include <netdb.h>
 #include <string.h>
 #include <sys/wait.h>
-#include <time.h>
-#include <decrypt.h>
-#include <scheduling.h>
+#include "scheduling.h"
+#include "decrypt.h"
 #include "memwatch.h"
 #include "msgprotocol.h"
+#include "commonfunc.c"
 
-#define MAXLENGTH 1200  // maximum length of file name and tweets
+#define MAXLENGTH 1100  // maximum length of file name and tweets
 #define MAXCORES 32
 
 const int base = 41;
 const ull N=(ull)429443481*10+7,D=1921821779;
 
 char *encfile, *decfile, *buf; // encrypt file name, decrypt file name, buffer for messages
-
-/* 
- * function: getcurtime
- * description: get the time stamp of calling time
- * arguments: none
- * return value: char * type, the address of string of time
- * */
-char *getcurtime(){
-	char *curtime;
-	time_t ctm;
-	time(&ctm);
-	curtime = ctime(&ctm);
-	curtime[strlen(curtime)-1] = 0;//eliminate '\n' at the end of string
-	return curtime;
-}
 
 /*
  * function: reverse
@@ -92,6 +77,13 @@ char *itoa(int n, char *s){
 	return s;
 }
 
+/*
+ * function: lyrebird
+ * description: called by child process. Uses pipes to receive decryption work
+ * 			    from parent process and sends feedback to parent process.
+ * arguments: int pfd: pipe file descriptor of read
+ * 			  int cfd: pipe file descriptor of write
+ * */
 int lyrebird(int pfd, int cfd){//pfd is file decriptor of the pipe parent process write data into, cfd is for child process to write data into
     char *tweets,*decrypted;//use tweets to store a tweet which is to be decrypted, and decrypted to store the decrypted tweet
     char *encfile,*decfile;//encrypted file name and decrypted file name
@@ -185,18 +177,6 @@ void terminate(int exitv){
 	free(encfile);
 	free(decfile);
 	exit(exitv);
-}
-
-int sockread(int sockfd, char *s){
-	int len;
-	char buf[2];
-	len = 0;
-	while(read(sockfd, buf, 1) > 0){
-		s[len++] = buf[0];
-		if(buf[0] == 0)
-			return len;
-	}
-	return -1;
 }
 
 int main(int argc, char **argv){
@@ -351,25 +331,17 @@ int main(int argc, char **argv){
 			if(strcmp(buf, CHILD_READY) == 0) {
 				// tell server it is ready for new task 
 				strcpy(buf, LCREADY);
-				//printf("ready message: %s\n", buf);
 				write(sockfd, buf, MSGLEN);
 				read(sockfd, buf, MSGLEN);
-				//printf("child ready and get message from server %s.\n", buf);
-				// server has more tasks, get file names
+				// server has tasks, get file names
 				if(strcmp(buf, LSWORK) == 0) {
-					//read(sockfd, encfile, MAXLENGTH);
-					//read(sockfd, decfile, MAXLENGTH);
 					sockread(sockfd, encfile);
-					//printf("sockread enc: %s\n",encfile);
 					sockread(sockfd, decfile);
-					//printf("sockread dec: %s\n",decfile);
-					//printf("get work: %s %s\n", encfile, decfile);
 					write(pipepfd[i][1], encfile, MAXLENGTH);
 					write(pipepfd[i][1], decfile, MAXLENGTH);
 				}
 				// server has done all works
 				else { 
-					//printf("done\n");
 					break;
 				}
 			}
@@ -380,9 +352,6 @@ int main(int argc, char **argv){
 				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH); // get the decrypted file name
 				write(sockfd, buf, strlen(buf)+1);
-				//printf("success message: %s\n",buf);
-				//printf("child success of %s.\n", buf);
-				//sleep(1);
 			}
 			else if(strcmp(buf, CHILD_ERROR) == 0) { // child process encounters an error which can be fixed
 				// tell server failure
@@ -390,11 +359,9 @@ int main(int argc, char **argv){
 				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, strlen(buf)+1);
-				//printf("child failure of %s.\n", buf);
 			}
 			else { // child process encounters an error which can be fixed
 				// tell server failure and disconnect
-				//printf("fatal error, escape!!!!!\n");
 				strcpy(buf, LCFAIL);
 				write(sockfd, buf, MSGLEN);
 				strcpy(buf, "A fatal error occurred in process ");

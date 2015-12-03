@@ -30,10 +30,10 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <net/if.h>
-#include <time.h>
 #include <poll.h>
 #include "memwatch.h"
 #include "msgprotocol.h"
+#include "commonfunc.h"
 
 #define MAXCONNECTION 10000 // maximum number of client connections
 #define MAXLENGTH 1100 // maximum length of file name and tweets
@@ -44,21 +44,6 @@ char *encfile, *decfile; // file name
 FILE *fcfg, *flog; // file pointer
 struct pollfd fds[MAXCONNECTION]; // objects for function poll()
 int nfds; // number of objects in poll()
-
-/* 
- * function: getcurtime
- * description: get the time stamp of calling time
- * arguments: none
- * return value: char * type, the address of string of time
- * */
-char *getcurtime(){
-	char *curtime;
-	time_t ctm;
-	time(&ctm);
-	curtime = ctime(&ctm);
-	curtime[strlen(curtime)-1] = 0;//eliminate '\n' at the end of string
-	return curtime;
-}
 
 /* 
  * function name: getIPaddress
@@ -110,18 +95,6 @@ void terminate(int exitv){
 	exit(exitv);
 }
 
-int sockread(int sockfd, char *s){
-	int len;
-	char buf[2];
-	len = 0;
-	while(read(sockfd, buf, 1) > 0){
-		s[len++] = buf[0];
-		if(buf[0] == 0)
-			return len;
-	}
-	return -1;
-}
-
 /*
  * function: main
  * description: Create socket and accept internet connection
@@ -137,7 +110,7 @@ int main(int argc, char **argv){
 	int i,j;
 	int status; // current status telling client whether to decrypt or to exit
 	int cur_nfds,addrs;
-	int on;
+	int sockopt; // set socket option
 	int sockfd, csockfd; //socket file descriptor
 	int addrindex[MAXCONNECTION]; // all clients' ip addresses
 	int taskover; // indicating whether all tasks are assigned
@@ -190,9 +163,9 @@ int main(int argc, char **argv){
 	fds[0].events = POLLIN;
 	addrindex[0] = 0;
 	addrs = 1;
-	on = 1;
+	sockopt = 1;
 	// set socket option so that can be used below
-	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (char *)&on, sizeof(on)) < 0 ){
+	if(setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (char *)&sockopt, sizeof(sockopt) < 0 ){
 		printf("[%s] lyrebird.server PID %d failed to call setsockopt.\n", getcurtime(), getpid());
 		terminate(EXIT_FAILURE);
 	}
@@ -275,29 +248,23 @@ int main(int argc, char **argv){
 					if(EOF == fscanf(fcfg, "%s", encfile)) { // all tasks distributed
 						taskover = 1;
 						//tell clients to exit
-						//status = LSDONE;
 						strcpy(buf, LSDONE);
 						write(fds[i].fd, buf, MSGLEN);
 						continue;
 					}
 					//tell client to work
-					//status = LSWORK;
 					strcpy(buf, LSWORK);
 					write(fds[i].fd, buf, MSGLEN);
-					//write(fds[i].fd, encfile, MAXLENGTH);
 					write(fds[i].fd, encfile, strlen(encfile)+1);
 					fscanf(fcfg, "%s", decfile);
-					//write(fds[i].fd, decfile, MAXLENGTH);
 					write(fds[i].fd, decfile, strlen(decfile)+1);
 					fprintf(flog, "[%s] The lyrebird client %s has been given the task of decrypting %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), encfile);
 				}
 				else if(strcmp(buf, LCFAIL) == 0) { // client failed due to some error
-					//read(fds[i].fd, buf, MAXLENGTH); // read error message
 					sockread(fds[i].fd, buf);
 					fprintf(flog, "[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), buf);
 				}
 				else if(strcmp(buf, LCSUCC) == 0) { // client successfully decrypted a file
-					//read(fds[i].fd, buf, MAXLENGTH); // read the file name
 					sockread(fds[i].fd, buf);
 					fprintf(flog, "[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
 				}
