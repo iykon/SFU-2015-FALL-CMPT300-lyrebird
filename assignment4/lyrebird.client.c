@@ -338,12 +338,12 @@ int main(int argc, char **argv){
 			// child process is ready for new task
 			if(strcmp(buf, CHILD_READY) == 0) {
 				// tell server it is ready for new task 
-				status = LCREADY;
-				write(sockfd, &status, MAXLENGTH);
+				strcpy(buf, LCREADY);
+				write(sockfd, buf, MAXLENGTH);
 				read(sockfd, buf, MAXLENGTH);
 				printf("child ready and get message from server %s.\n", buf);
 				// server has more tasks, get file names
-				if(buf[0] == LSWORK) {
+				if(strcmp(buf, LSWORK) == 0) {
 					read(sockfd, encfile, MAXLENGTH);
 					read(sockfd, decfile, MAXLENGTH);
 					printf("get work: %s %s\n", encfile, decfile);
@@ -359,29 +359,29 @@ int main(int argc, char **argv){
 			// child process decrypted successfully
 			else if(strcmp(buf, CHILD_SUCCESS) == 0) {
 				// tell server success
-				status = LCSUCC;
+				strcpy(buf, LCSUCC);
+				write(sockfd, buf, MAXLENGTH);
 				read(pipecfd[i][0], buf, MAXLENGTH); // get the decrypted file name
-				write(sockfd, &status, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
 				printf("child success of %s.\n", buf);
 			}
 			else if(strcmp(buf, CHILD_ERROR) == 0) { // child process encounters an error which can be fixed
 				// tell server failure
-				status = LCFAIL;
+				strcpy(buf, LCFAIL);
+				write(sockfd, buf, MAXLENGTH);
 				read(pipecfd[i][0], buf, MAXLENGTH);
-				write(sockfd, &status, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
 				printf("child failure of %s.\n", buf);
 			}
 			else { // child process encounters an error which can be fixed
 				// tell server failure and disconnect
 				printf("fatal error, escape!!!!!\n");
-				status = LCFAIL;
-				write(sockfd, &status, MAXLENGTH);
+				strcpy(buf, LCFAIL);
+				write(sockfd, buf, MAXLENGTH);
 				strcpy(buf, "A fatal error occurred in process ");
 				strcat(buf, itoa(childprocess[i], encfile));
 				write(sockfd, buf, MAXLENGTH);
-				break;
+				break; // exit
 			}
 		}
 	}
@@ -396,16 +396,16 @@ int main(int argc, char **argv){
 		// read remaining messages
 		while(read(pipecfd[i][0], buf, MAXLENGTH)){
 			if(strcmp(buf, CHILD_SUCCESS) == 0) {
-				read(pipecfd[i][0], buf, MAXLENGTH);
 				// report success to server
-				status = LCSUCC;
-				write(sockfd, &status, MAXLENGTH);
+				strcpy(buf, LCFAIL);
+				write(sockfd, buf, MAXLENGTH);
+				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
 			}
 			else if(strcmp(buf, CHILD_ERROR) == 0 || strcmp(buf, CHILD_FERROR) == 0) { // child process encounters an error
 				// report failure to server
-				status = LCFAIL;
-				write(sockfd, &status, MAXLENGTH);
+				strcpy(buf, LCFAIL);
+				write(sockfd, buf, MAXLENGTH);
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
 			}

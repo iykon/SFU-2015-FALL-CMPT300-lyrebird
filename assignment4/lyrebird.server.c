@@ -258,7 +258,7 @@ int main(int argc, char **argv){
 					--i;
 					continue;
 				}
-				if(buf[0] == LCREADY) { // client is ready for a task
+				if(strcmp(buf, LCREADY) == 0) { // client is ready for a task
 					if(EOF == fscanf(fcfg, "%s", encfile)) { // all tasks distributed
 						taskover = 1;
 						//tell clients to exit

@@ -17,10 +17,10 @@
 #ifndef MSGPROTOCOL_H
 #define MSGPROTOCOL_H
 
-#define LSWORK 0x0001 // server message telling client to work
-#define LSDONE 0x0002 // server message telling client to exit
-#define LCSUCC 0x0004 // client message telling server succeed to decrypt
-#define LCFAIL 0x0008 // client message telling server fail to decrypt
-#define LCREADY 0x0010// client message telling server ready for next task
+#define LSWORK "s work"// server message telling client to work
+#define LSDONE "s done"// server message telling client to exit
+#define LCSUCC "c success"// client message telling server succeed to decrypt
+#define LCFAIL "c failure"// client message telling server fail to decrypt
+#define LCREADY "c ready"// client message telling server ready for next task
 
 #endif
