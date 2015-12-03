@@ -341,15 +341,18 @@ int main(int argc, char **argv){
 				status = LCREADY;
 				write(sockfd, &status, MAXLENGTH);
 				read(sockfd, buf, MAXLENGTH);
+				printf("child ready and get message from server %s.\n", buf);
 				// server has more tasks, get file names
 				if(buf[0] == LSWORK) {
 					read(sockfd, encfile, MAXLENGTH);
 					read(sockfd, decfile, MAXLENGTH);
+					printf("get work: %s %s\n", encfile, decfile);
 					write(pipepfd[i][1], encfile, MAXLENGTH);
 					write(pipepfd[i][1], decfile, MAXLENGTH);
 				}
 				// server has done all works
 				else { 
+					printf("done\n");
 					break;
 				}
 			}
@@ -360,6 +363,7 @@ int main(int argc, char **argv){
 				read(pipecfd[i][0], buf, MAXLENGTH); // get the decrypted file name
 				write(sockfd, &status, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
+				printf("child success of %s.\n", buf);
 			}
 			else if(strcmp(buf, CHILD_ERROR) == 0) { // child process encounters an error which can be fixed
 				// tell server failure
@@ -367,9 +371,11 @@ int main(int argc, char **argv){
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, &status, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
+				printf("child failure of %s.\n", buf);
 			}
 			else { // child process encounters an error which can be fixed
 				// tell server failure and disconnect
+				printf("fatal error, escape!!!!!\n");
 				status = LCFAIL;
 				write(sockfd, &status, MAXLENGTH);
 				strcpy(buf, "A fatal error occurred in process ");
