@@ -36,7 +36,7 @@
 #include "msgprotocol.h"
 
 #define MAXCONNECTION 10000 // maximum number of client connections
-#define MAXLENGTH 1200 // maximum length of file name and tweets
+#define MAXLENGTH 1100 // maximum length of file name and tweets
 
 char *ipaddress; // ip of running machine
 char *buf;	// buffer for sending and receiving message
@@ -242,7 +242,7 @@ int main(int argc, char **argv){
 			 * it means server gets a new message
 			 * */
 			else{
-				retv = read(fds[i].fd, buf, MAXLENGTH);
+				retv = read(fds[i].fd, buf, MSGLEN);
 				if(retv == 0) { // client disconnets
 					close(fds[i].fd);
 					if(taskover == 0)
@@ -265,13 +265,13 @@ int main(int argc, char **argv){
 						//tell clients to exit
 						//status = LSDONE;
 						strcpy(buf, LSDONE);
-						write(fds[i].fd, buf, MAXLENGTH);
+						write(fds[i].fd, buf, MSGLEN);
 						continue;
 					}
 					//tell client to work
 					//status = LSWORK;
 					strcpy(buf, LSWORK);
-					write(fds[i].fd, buf, MAXLENGTH);
+					write(fds[i].fd, buf, MSGLEN);
 					write(fds[i].fd, encfile, MAXLENGTH);
 					fscanf(fcfg, "%s", decfile);
 					//printf("%s %s\n", encfile, decfile);

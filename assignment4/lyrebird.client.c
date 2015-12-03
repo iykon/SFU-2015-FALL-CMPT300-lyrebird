@@ -339,8 +339,8 @@ int main(int argc, char **argv){
 			if(strcmp(buf, CHILD_READY) == 0) {
 				// tell server it is ready for new task 
 				strcpy(buf, LCREADY);
-				write(sockfd, buf, MAXLENGTH);
-				read(sockfd, buf, MAXLENGTH);
+				write(sockfd, buf, MSGLEN);
+				read(sockfd, buf, MSGLEN);
 				printf("child ready and get message from server %s.\n", buf);
 				// server has more tasks, get file names
 				if(strcmp(buf, LSWORK) == 0) {
@@ -360,7 +360,7 @@ int main(int argc, char **argv){
 			else if(strcmp(buf, CHILD_SUCCESS) == 0) {
 				// tell server success
 				strcpy(buf, LCSUCC);
-				write(sockfd, buf, MAXLENGTH);
+				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH); // get the decrypted file name
 				write(sockfd, buf, MAXLENGTH);
 				printf("child success of %s.\n", buf);
@@ -368,7 +368,7 @@ int main(int argc, char **argv){
 			else if(strcmp(buf, CHILD_ERROR) == 0) { // child process encounters an error which can be fixed
 				// tell server failure
 				strcpy(buf, LCFAIL);
-				write(sockfd, buf, MAXLENGTH);
+				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
 				printf("child failure of %s.\n", buf);
@@ -377,7 +377,7 @@ int main(int argc, char **argv){
 				// tell server failure and disconnect
 				printf("fatal error, escape!!!!!\n");
 				strcpy(buf, LCFAIL);
-				write(sockfd, buf, MAXLENGTH);
+				write(sockfd, buf, MSGLEN);
 				strcpy(buf, "A fatal error occurred in process ");
 				strcat(buf, itoa(childprocess[i], encfile));
 				write(sockfd, buf, MAXLENGTH);
@@ -398,14 +398,14 @@ int main(int argc, char **argv){
 			if(strcmp(buf, CHILD_SUCCESS) == 0) {
 				// report success to server
 				strcpy(buf, LCFAIL);
-				write(sockfd, buf, MAXLENGTH);
+				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
 			}
 			else if(strcmp(buf, CHILD_ERROR) == 0 || strcmp(buf, CHILD_FERROR) == 0) { // child process encounters an error
 				// report failure to server
 				strcpy(buf, LCFAIL);
-				write(sockfd, buf, MAXLENGTH);
+				write(sockfd, buf, MSGLEN);
 				read(pipecfd[i][0], buf, MAXLENGTH);
 				write(sockfd, buf, MAXLENGTH);
 			}

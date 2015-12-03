@@ -22,5 +22,6 @@
 #define LCSUCC "c success"// client message telling server succeed to decrypt
 #define LCFAIL "c failure"// client message telling server fail to decrypt
 #define LCREADY "c ready"// client message telling server ready for next task
+#define MSGLEN 12
 
 #endif
