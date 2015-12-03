@@ -187,6 +187,18 @@ void terminate(int exitv){
 	exit(exitv);
 }
 
+int sockread(int sockfd, char *s){
+	int len;
+	char buf[2];
+	len = 0;
+	while(read(sockfd, buf, 1) > 0){
+		s[len++] = buf[0];
+		if(buf[0] == 0)
+			return len;
+	}
+	return -1;
+}
+
 int main(int argc, char **argv){
 	char c;
 	fd_set rfds; // file descriptor set
@@ -344,8 +356,10 @@ int main(int argc, char **argv){
 				printf("child ready and get message from server %s.\n", buf);
 				// server has more tasks, get file names
 				if(strcmp(buf, LSWORK) == 0) {
-					read(sockfd, encfile, MAXLENGTH);
-					read(sockfd, decfile, MAXLENGTH);
+					//read(sockfd, encfile, MAXLENGTH);
+					//read(sockfd, decfile, MAXLENGTH);
+					sockread(sockfd, encfile);
+					sockread(sockfd, decfile);
 					printf("get work: %s %s\n", encfile, decfile);
 					write(pipepfd[i][1], encfile, MAXLENGTH);
 					write(pipepfd[i][1], decfile, MAXLENGTH);

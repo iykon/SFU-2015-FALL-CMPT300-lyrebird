@@ -110,6 +110,18 @@ void terminate(int exitv){
 	exit(exitv);
 }
 
+int sockread(int sockfd, char *s){
+	int len;
+	char buf[2];
+	len = 0;
+	while(read(sockfd, buf, 1) > 0){
+		s[len++] = buf[0];
+		if(buf[0] == 0)
+			return len;
+	}
+	return -1;
+}
+
 /*
  * function: main
  * description: Create socket and accept internet connection
@@ -272,18 +284,22 @@ int main(int argc, char **argv){
 					//status = LSWORK;
 					strcpy(buf, LSWORK);
 					write(fds[i].fd, buf, MSGLEN);
-					write(fds[i].fd, encfile, MAXLENGTH);
+					//write(fds[i].fd, encfile, MAXLENGTH);
+					write(fds[i].fd, encfile, strlen(encfile)+1);
 					fscanf(fcfg, "%s", decfile);
 					//printf("%s %s\n", encfile, decfile);
-					write(fds[i].fd, decfile, MAXLENGTH);
+					//write(fds[i].fd, decfile, MAXLENGTH);
+					write(fds[i].fd, decfile, strlen(decfile)+1);
 					fprintf(flog, "[%s] The lyrebird client %s has been given the task of decrypting %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), encfile);
 				}
 				else if(strcmp(buf, LCFAIL) == 0) { // client failed due to some error
-					read(fds[i].fd, buf, MAXLENGTH); // read error message
+					//read(fds[i].fd, buf, MAXLENGTH); // read error message
+					sockread(fds[i].fd, buf);
 					fprintf(flog, "[%s] The lyrebird client %s has encountered an error: %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr), buf);
 				}
 				else if(strcmp(buf, LCSUCC) == 0) { // client successfully decrypted a file
-					read(fds[i].fd, buf, MAXLENGTH); // read the file name
+					//read(fds[i].fd, buf, MAXLENGTH); // read the file name
+					sockread(fds[i].fd, buf);
 					fprintf(flog, "[%s] The lyrebird client %s has successfully decrypted %s.\n", getcurtime(), inet_ntoa(myaddr[addrindex[i]].sin_addr)/*ntohs(myaddr[addrindex[i]].sin_port)*/, buf);
 				}
 			}
